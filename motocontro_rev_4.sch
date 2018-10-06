@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.3">
+<eagle version="9.1.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2376,6 +2376,7 @@ by exp-lbrs-replace2.ulp</description>
 <sheets>
 <sheet>
 <plain>
+<text x="-43.18" y="38.1" size="1.778" layer="91">Need: PWM pins, OPAMP pin, OPAMP filter, #SD pin.</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="0" y="0"/>
@@ -2393,20 +2394,6 @@ by exp-lbrs-replace2.ulp</description>
 <busses>
 </busses>
 <nets>
-<net name="LIN" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="1_LIN"/>
-<wire x1="-17.78" y1="17.78" x2="-25.4" y2="17.78" width="0.1524" layer="91"/>
-<label x="-25.4" y="17.78" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="HIN" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="3_HIN"/>
-<wire x1="-17.78" y1="7.62" x2="-25.4" y2="7.62" width="0.1524" layer="91"/>
-<label x="-25.4" y="7.62" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
 <net name="0" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="8_GND"/>
@@ -2414,28 +2401,8 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="-22.86" y1="-17.78" x2="-22.86" y2="-25.4" width="0.1524" layer="91"/>
 <pinref part="X_1" gate="G$1" pin="0"/>
 </segment>
-<segment>
-<pinref part="CURR_RES1" gate="G$1" pin="1"/>
-<pinref part="CURR_RES" gate="G$1" pin="1"/>
-<wire x1="157.48" y1="-71.12" x2="147.32" y2="-71.12" width="0.1524" layer="91"/>
-<pinref part="X_2" gate="G$1" pin="0"/>
-<wire x1="147.32" y1="-71.12" x2="137.16" y2="-71.12" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="-71.12" x2="147.32" y2="-81.28" width="0.1524" layer="91"/>
-<junction x="147.32" y="-71.12"/>
-<pinref part="BATTERY" gate="G$1" pin="-"/>
-<wire x1="68.58" y1="-22.86" x2="68.58" y2="-71.12" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="-71.12" x2="68.58" y2="-71.12" width="0.1524" layer="91"/>
-<junction x="137.16" y="-71.12"/>
-</segment>
 </net>
-<net name="SD/OD" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="2_SD/OD"/>
-<wire x1="-17.78" y1="12.7" x2="-25.4" y2="12.7" width="0.1524" layer="91"/>
-<label x="-25.4" y="12.7" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="N$3" class="0">
+<net name="OUT" class="0">
 <segment>
 <pinref part="LS_FET" gate="G$1" pin="D"/>
 <pinref part="HS_FET" gate="G$1" pin="S"/>
@@ -2445,6 +2412,14 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="203.2" y1="2.54" x2="203.2" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="-5.08" x2="147.32" y2="-5.08" width="0.1524" layer="91"/>
 <junction x="147.32" y="-5.08"/>
+<label x="147.32" y="-5.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="14_OUT"/>
+<pinref part="CBOOT" gate="G$1" pin="2"/>
+<wire x1="17.78" y1="7.62" x2="35.56" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="7.62" x2="35.56" y2="10.16" width="0.1524" layer="91"/>
+<label x="25.4" y="7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -2460,28 +2435,16 @@ by exp-lbrs-replace2.ulp</description>
 <junction x="147.32" y="35.56"/>
 </segment>
 </net>
-<net name="RES+" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="10_CP+"/>
-<wire x1="17.78" y1="-12.7" x2="22.86" y2="-12.7" width="0.1524" layer="91"/>
-<label x="22.86" y="-12.7" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U$1" gate="G$1" pin="9_OP+"/>
-<wire x1="17.78" y1="-17.78" x2="22.86" y2="-17.78" width="0.1524" layer="91"/>
-<label x="22.86" y="-17.78" size="1.778" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="LVG" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="11_LVG"/>
-<wire x1="17.78" y1="-7.62" x2="22.86" y2="-7.62" width="0.1524" layer="91"/>
-<label x="22.86" y="-7.62" size="1.778" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="LS_FET" gate="G$1" pin="G"/>
 <wire x1="132.08" y1="-22.86" x2="121.92" y2="-22.86" width="0.1524" layer="91"/>
 <label x="121.92" y="-22.86" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="11_LVG"/>
+<wire x1="17.78" y1="-7.62" x2="27.94" y2="-7.62" width="0.1524" layer="91"/>
+<label x="25.4" y="-7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="HVG" class="0">
@@ -2490,23 +2453,21 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="132.08" y1="15.24" x2="121.92" y2="15.24" width="0.1524" layer="91"/>
 <label x="121.92" y="15.24" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="15_HVG"/>
+<wire x1="17.78" y1="12.7" x2="22.86" y2="12.7" width="0.1524" layer="91"/>
+<label x="20.32" y="12.7" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="N$1" class="0">
+<net name="V_BOOT" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="16_BOOT"/>
 <pinref part="CBOOT" gate="G$1" pin="1"/>
 <wire x1="17.78" y1="17.78" x2="35.56" y2="17.78" width="0.1524" layer="91"/>
+<label x="25.4" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="14_OUT"/>
-<pinref part="CBOOT" gate="G$1" pin="2"/>
-<wire x1="17.78" y1="7.62" x2="35.56" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="7.62" x2="35.56" y2="10.16" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="CUR_RES" class="0">
+<net name="RSENSE+" class="0">
 <segment>
 <pinref part="LS_FET" gate="G$1" pin="S"/>
 <wire x1="147.32" y1="-35.56" x2="147.32" y2="-60.96" width="0.1524" layer="91"/>
@@ -2516,6 +2477,75 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="137.16" y1="-60.96" x2="147.32" y2="-60.96" width="0.1524" layer="91"/>
 <junction x="147.32" y="-60.96"/>
 <label x="147.32" y="-50.8" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="10_CP+"/>
+<wire x1="17.78" y1="-12.7" x2="27.94" y2="-12.7" width="0.1524" layer="91"/>
+<label x="25.4" y="-12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="RSENSE-" class="0">
+<segment>
+<pinref part="CURR_RES1" gate="G$1" pin="1"/>
+<pinref part="CURR_RES" gate="G$1" pin="1"/>
+<wire x1="157.48" y1="-71.12" x2="147.32" y2="-71.12" width="0.1524" layer="91"/>
+<pinref part="X_2" gate="G$1" pin="0"/>
+<wire x1="147.32" y1="-71.12" x2="137.16" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="-71.12" x2="147.32" y2="-81.28" width="0.1524" layer="91"/>
+<junction x="147.32" y="-71.12"/>
+<pinref part="BATTERY" gate="G$1" pin="-"/>
+<wire x1="68.58" y1="-22.86" x2="68.58" y2="-71.12" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="-71.12" x2="68.58" y2="-71.12" width="0.1524" layer="91"/>
+<junction x="137.16" y="-71.12"/>
+<label x="147.32" y="-76.2" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="9_OP+"/>
+<wire x1="17.78" y1="-17.78" x2="27.94" y2="-17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="#LIN" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="1_LIN"/>
+<wire x1="-17.78" y1="17.78" x2="-33.02" y2="17.78" width="0.1524" layer="91"/>
+<label x="-33.02" y="17.78" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="#SD/OD" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="2_SD/OD"/>
+<wire x1="-17.78" y1="12.7" x2="-33.02" y2="12.7" width="0.1524" layer="91"/>
+<label x="-33.02" y="12.7" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="HIN" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="3_HIN"/>
+<wire x1="-17.78" y1="7.62" x2="-33.02" y2="7.62" width="0.1524" layer="91"/>
+<label x="-33.02" y="7.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="OP-" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="6_OP-"/>
+<wire x1="-17.78" y1="-7.62" x2="-33.02" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-33.02" y="-7.62" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DT" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="5_DT"/>
+<wire x1="-17.78" y1="-2.54" x2="-33.02" y2="-2.54" width="0.1524" layer="91"/>
+<label x="-33.02" y="-2.54" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="V_CC" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="4_VCC"/>
+<wire x1="-17.78" y1="2.54" x2="-33.02" y2="2.54" width="0.1524" layer="91"/>
+<label x="-33.02" y="2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
