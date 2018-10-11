@@ -13059,9 +13059,9 @@ a breakout board that docks for this BUCK</text>
 <junction x="-30.48" y="30.48"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="6"/>
-<wire x1="-114.3" y1="5.08" x2="-121.92" y2="5.08" width="0.1524" layer="91"/>
-<label x="-121.92" y="5.08" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="30"/>
+<wire x1="-114.3" y1="-30.48" x2="-124.46" y2="-30.48" width="0.1524" layer="91"/>
+<label x="-124.46" y="-30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="OP-" class="0">
@@ -13281,11 +13281,6 @@ a breakout board that docks for this BUCK</text>
 </net>
 <net name="SD/OD" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="5"/>
-<wire x1="-114.3" y1="7.62" x2="-124.46" y2="7.62" width="0.1524" layer="91"/>
-<label x="-124.46" y="7.62" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$1" gate="G$1" pin="2_SD/OD"/>
 <wire x1="-10.16" y1="30.48" x2="-25.4" y2="30.48" width="0.1524" layer="91"/>
 <label x="-25.4" y="30.48" size="1.778" layer="95"/>
@@ -13298,6 +13293,11 @@ a breakout board that docks for this BUCK</text>
 <wire x1="-27.94" y1="-78.74" x2="-27.94" y2="-73.66" width="0.1524" layer="91"/>
 <junction x="-27.94" y="-78.74"/>
 <label x="-27.94" y="-73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="24"/>
+<wire x1="-114.3" y1="-15.24" x2="-124.46" y2="-15.24" width="0.1524" layer="91"/>
+<label x="-124.46" y="-15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

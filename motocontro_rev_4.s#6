@@ -12268,7 +12268,7 @@ type 0309, grid 2.5 mm</description>
 <part name="MOTOR" library="motor controller rev 3.0.6" library_urn="urn:adsk.eagle:library:1622728" deviceset="MOTOR" device="" package3d_urn="urn:adsk.eagle:package:1622996/1"/>
 <part name="CBOOT" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="C" device="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="1 uF "/>
 <part name="U$2" library="Teensy356" deviceset="TEENSY_3.5/3.6" device=""/>
-<part name="CURR_RES1" library="motocontro_rev_4" deviceset="RESSENSE_2818" device="" package3d_urn="urn:adsk.eagle:package:2273943/1" value="40 mOhm "/>
+<part name="CURR_RES1" library="motocontro_rev_4" deviceset="RESSENSE_2818" device="" package3d_urn="urn:adsk.eagle:package:2273943/1" value="37m"/>
 <part name="RDT" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="75.5k"/>
 <part name="CDT" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="C" device="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="100nF"/>
 <part name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="7k"/>
@@ -12287,7 +12287,7 @@ type 0309, grid 2.5 mm</description>
 <part name="R6" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805"/>
 <part name="R7" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805"/>
 <part name="U$5" library="motocontro_rev_4" deviceset="FERD40H100SG-TR" device="" package3d_urn="urn:adsk.eagle:package:38457/1"/>
-<part name="RSENSE1" library="motocontro_rev_4" deviceset="RESSENSE_2818" device="" package3d_urn="urn:adsk.eagle:package:2273943/1"/>
+<part name="RSENSE1" library="motocontro_rev_4" deviceset="RESSENSE_2818" device="" package3d_urn="urn:adsk.eagle:package:2273943/1" value="37m"/>
 </parts>
 <sheets>
 <sheet>

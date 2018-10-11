@@ -12292,8 +12292,9 @@ type 0309, grid 2.5 mm</description>
 <sheets>
 <sheet>
 <plain>
-<text x="27.94" y="68.58" size="1.778" layer="94">PGND is used for the power ground. 
-DGND is used for the digital logic</text>
+<text x="-213.36" y="-38.1" size="1.778" layer="94">PGND is used for the power ground. 
+DGND is used for the digital logic
+They will connect through GND trace </text>
 <text x="121.92" y="2.54" size="1.778" layer="94">R3, R4 for potential current limit to the gates.
 This increases transient times 
 which reduces inductive spikes
@@ -12497,11 +12498,6 @@ a breakout board that docks for this BUCK</text>
 </net>
 <net name="#SD/OD" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="2_SD/OD"/>
-<wire x1="-10.16" y1="30.48" x2="-25.4" y2="30.48" width="0.1524" layer="91"/>
-<label x="-25.4" y="30.48" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="RSD" gate="G$1" pin="1"/>
 <pinref part="CSD" gate="G$1" pin="2"/>
 <wire x1="-30.48" y1="-78.74" x2="-27.94" y2="-78.74" width="0.1524" layer="91"/>
@@ -12524,6 +12520,11 @@ a breakout board that docks for this BUCK</text>
 <wire x1="-30.48" y1="35.56" x2="-25.4" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="30.48" x2="-38.1" y2="30.48" width="0.1524" layer="91"/>
 <junction x="-30.48" y="30.48"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="6"/>
+<wire x1="-114.3" y1="5.08" x2="-121.92" y2="5.08" width="0.1524" layer="91"/>
+<label x="-121.92" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="OP-" class="0">
@@ -12653,6 +12654,11 @@ a breakout board that docks for this BUCK</text>
 <label x="-25.4" y="5.08" size="1.778" layer="95"/>
 <wire x1="-17.78" y1="5.08" x2="-25.4" y2="5.08" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="14/A0"/>
+<wire x1="-73.66" y1="-7.62" x2="-63.5" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-63.5" y="-7.62" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -12753,6 +12759,18 @@ a breakout board that docks for this BUCK</text>
 <wire x1="25.4" y1="0" x2="35.56" y2="0" width="0.1524" layer="91"/>
 <label x="30.48" y="0" size="1.778" layer="95"/>
 <wire x1="35.56" y1="0" x2="38.1" y2="0" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="SD/OD" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="5"/>
+<wire x1="-114.3" y1="7.62" x2="-124.46" y2="7.62" width="0.1524" layer="91"/>
+<label x="-124.46" y="7.62" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="2_SD/OD"/>
+<wire x1="-10.16" y1="30.48" x2="-25.4" y2="30.48" width="0.1524" layer="91"/>
+<label x="-25.4" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

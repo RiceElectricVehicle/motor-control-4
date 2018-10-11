@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.2">
+<eagle version="9.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -12829,73 +12829,146 @@ IPC Nominal Density</description>
 <text x="-213.36" y="-38.1" size="1.778" layer="94">PGND is used for the power ground. 
 DGND is used for the digital logic
 They will connect through GND trace </text>
-<text x="121.92" y="2.54" size="1.778" layer="94">R3, R4 for potential current limit to the gates.
+<text x="119.38" y="-2.54" size="1.778" layer="94">R3, R4 for potential current limit to the gates.
 This increases transient times 
 which reduces inductive spikes
 Need to find appropriate package</text>
-<text x="266.7" y="30.48" size="1.778" layer="94">Must make a Schottky diode part 
-Check BOM </text>
 <text x="-195.58" y="35.56" size="1.778" layer="94">Made this part for the Stingray 
 We actually stilll need to make 
 a breakout board that docks for this BUCK</text>
-<wire x1="71.12" y1="53.34" x2="71.12" y2="-93.98" width="0.6096" layer="94"/>
-<wire x1="71.12" y1="-93.98" x2="309.88" y2="-93.98" width="0.6096" layer="94"/>
-<wire x1="309.88" y1="-93.98" x2="309.88" y2="66.04" width="0.6096" layer="94"/>
-<wire x1="309.88" y1="66.04" x2="71.12" y2="66.04" width="0.6096" layer="94"/>
-<wire x1="71.12" y1="66.04" x2="71.12" y2="53.34" width="0.6096" layer="94"/>
-<wire x1="-134.62" y1="66.04" x2="-134.62" y2="-93.98" width="0.6096" layer="94"/>
+<wire x1="71.12" y1="66.04" x2="71.12" y2="-93.98" width="0.6096" layer="94"/>
+<wire x1="71.12" y1="-93.98" x2="241.3" y2="-93.98" width="0.6096" layer="94"/>
+<wire x1="241.3" y1="-93.98" x2="241.3" y2="66.04" width="0.6096" layer="94"/>
+<wire x1="241.3" y1="66.04" x2="71.12" y2="66.04" width="0.6096" layer="94"/>
 <wire x1="-134.62" y1="-93.98" x2="-226.06" y2="-93.98" width="0.6096" layer="94"/>
 <wire x1="-226.06" y1="-93.98" x2="-226.06" y2="66.04" width="0.6096" layer="94"/>
 <wire x1="-226.06" y1="66.04" x2="-134.62" y2="66.04" width="0.6096" layer="94"/>
-<text x="157.48" y="53.34" size="6.4516" layer="94">Half-Bridge Circuit </text>
+<text x="139.7" y="50.8" size="6.4516" layer="94">Half-Bridge Circuit </text>
 <text x="-193.04" y="53.34" size="6.4516" layer="94">Power</text>
 <wire x1="-134.62" y1="66.04" x2="-134.62" y2="-93.98" width="0.6096" layer="94"/>
 <wire x1="-134.62" y1="-93.98" x2="-53.34" y2="-93.98" width="0.6096" layer="94"/>
-<wire x1="-53.34" y1="-93.98" x2="-53.34" y2="66.04" width="0.6096" layer="94"/>
 <wire x1="-53.34" y1="66.04" x2="-134.62" y2="66.04" width="0.6096" layer="94"/>
 <text x="-104.14" y="55.88" size="6.4516" layer="94">MCU</text>
 <wire x1="-53.34" y1="66.04" x2="-53.34" y2="-93.98" width="0.6096" layer="94"/>
 <wire x1="-53.34" y1="-93.98" x2="71.12" y2="-93.98" width="0.6096" layer="94"/>
-<wire x1="71.12" y1="-93.98" x2="71.12" y2="66.04" width="0.6096" layer="94"/>
 <wire x1="71.12" y1="66.04" x2="-53.34" y2="66.04" width="0.6096" layer="94"/>
 <text x="-5.08" y="55.88" size="6.4516" layer="94">Driver</text>
 <text x="-45.72" y="-15.24" size="2.1844" layer="94">OpAmp Support</text>
 <text x="20.32" y="-66.04" size="2.1844" layer="94">DeadTime</text>
 <text x="-45.72" y="-66.04" size="2.1844" layer="94">Fault Disable Time</text>
-<text x="-17.78" y="-27.94" size="1.778" layer="94">I think this should be connected to DGND? </text>
+<text x="40.64" y="-45.72" size="1.778" layer="94">Should be PGND </text>
+<text x="-203.2" y="30.48" size="1.778" layer="91">Stingray is overkill. Look for 10-1W buck</text>
+<text x="-208.28" y="-58.42" size="1.778" layer="94">Connect with a 0Ohm jumper, or jumper.</text>
+<text x="40.64" y="-25.4" size="1.778" layer="94">Make this tunable. 
+Pot, triple parallel or something</text>
+<text x="-154.94" y="71.12" size="1.778" layer="94">Add test pads. Add headers for GND
+Add a U-shape </text>
+<text x="-48.26" y="38.1" size="1.778" layer="94">Make possible to drive with two signals. </text>
+<text x="-119.38" y="-66.04" size="1.778" layer="94">put some LEDs as GPIOs to the teensy</text>
+<text x="137.16" y="30.48" size="1.778" layer="94">Add heatsink to FET package </text>
+<text x="124.46" y="-11.176" size="1.778" layer="94">consider adding two in parallel </text>
+<text x="-205.74" y="-68.58" size="1.778" layer="94">add a connector for a 15V fan </text>
+<text x="-124.46" y="-73.66" size="1.778" layer="94">connect a couple of GPIO or input headers hanging off </text>
+<text x="-208.28" y="-63.5" size="1.778" layer="94">Add LEDs to power regulators </text>
+<text x="-124.46" y="-78.74" size="1.778" layer="94">Make an SPI bus to run to an OLED display in the front </text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="7.62" y="17.78"/>
-<instance part="HS_FET" gate="G$1" x="177.8" y="20.32" smashed="yes">
-<attribute name="NAME" x="198.12" y="25.4" size="1.778" layer="94"/>
+<instance part="HS_FET" gate="G$1" x="160.02" y="17.78">
+<attribute name="NAME" x="180.34" y="22.86" size="1.778" layer="94"/>
 </instance>
-<instance part="LS_FET" gate="G$1" x="177.8" y="-17.78" smashed="yes">
-<attribute name="NAME" x="198.12" y="-12.7" size="1.778" layer="94"/>
+<instance part="LS_FET" gate="G$1" x="160.02" y="-20.32">
+<attribute name="NAME" x="180.34" y="-15.24" size="1.778" layer="94"/>
 </instance>
-<instance part="BATTERY" gate="G$1" x="114.3" y="-5.08"/>
-<instance part="MOTOR" gate="G$1" x="238.76" y="20.32"/>
-<instance part="CBOOT" gate="G$1" x="43.18" y="33.02"/>
+<instance part="BATTERY" gate="G$1" x="96.52" y="-7.62">
+<attribute name="NAME" x="102.616" y="-9.652" size="1.778" layer="94" align="center-left"/>
+<attribute name="VALUE" x="102.616" y="-11.938" size="1.778" layer="94" align="center-left"/>
+</instance>
+<instance part="MOTOR" gate="G$1" x="220.98" y="17.78">
+<attribute name="NAME" x="215.9" y="17.78" size="1.9304" layer="94"/>
+</instance>
+<instance part="CBOOT" gate="G$1" x="43.18" y="33.02">
+<attribute name="NAME" x="44.704" y="33.401" size="1.778" layer="95"/>
+<attribute name="VALUE" x="44.704" y="28.321" size="1.778" layer="96"/>
+</instance>
 <instance part="U$2" gate="G$1" x="-93.98" y="10.16"/>
-<instance part="CURR_RES1" gate="G$1" x="203.2" y="-60.96" rot="R90"/>
-<instance part="RDT" gate="G$1" x="45.72" y="-78.74" rot="R90"/>
-<instance part="CDT" gate="G$1" x="30.48" y="-78.74"/>
-<instance part="R2" gate="G$1" x="-27.94" y="-30.48" rot="R180"/>
-<instance part="R1" gate="G$1" x="-12.7" y="-33.02" rot="R180"/>
-<instance part="CDT1" gate="G$1" x="-25.4" y="-38.1" rot="R270"/>
-<instance part="RSD" gate="G$1" x="-35.56" y="-78.74" rot="R180"/>
-<instance part="CSD" gate="G$1" x="-20.32" y="-78.74" rot="R270"/>
-<instance part="R3" gate="G$1" x="160.02" y="20.32" rot="R180"/>
-<instance part="R4" gate="G$1" x="160.02" y="-17.78" rot="R180"/>
+<instance part="CURR_RES1" gate="G$1" x="185.42" y="-63.5" rot="R90">
+<attribute name="NAME" x="183.9214" y="-67.31" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="188.722" y="-67.31" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="RDT" gate="G$1" x="45.72" y="-78.74" rot="R90">
+<attribute name="NAME" x="44.2214" y="-82.55" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="49.022" y="-82.55" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="CDT" gate="G$1" x="30.48" y="-78.74">
+<attribute name="NAME" x="32.004" y="-78.359" size="1.778" layer="95"/>
+<attribute name="VALUE" x="32.004" y="-83.439" size="1.778" layer="96"/>
+</instance>
+<instance part="R2" gate="G$1" x="-27.94" y="-30.48" rot="R180">
+<attribute name="NAME" x="-24.13" y="-31.9786" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-24.13" y="-27.178" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="R1" gate="G$1" x="-12.7" y="-33.02" rot="R180">
+<attribute name="NAME" x="-8.89" y="-34.5186" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-8.89" y="-29.718" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CDT1" gate="G$1" x="-25.4" y="-38.1" rot="R270">
+<attribute name="NAME" x="-25.019" y="-39.624" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-30.099" y="-39.624" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="RSD" gate="G$1" x="-35.56" y="-78.74" rot="R180">
+<attribute name="NAME" x="-31.75" y="-80.2386" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-31.75" y="-75.438" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="CSD" gate="G$1" x="-20.32" y="-78.74" rot="R270">
+<attribute name="NAME" x="-19.939" y="-80.264" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-25.019" y="-80.264" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="R3" gate="G$1" x="142.24" y="17.78" rot="R180">
+<attribute name="NAME" x="146.05" y="16.2814" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="146.05" y="21.082" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="R4" gate="G$1" x="142.24" y="-20.32" rot="R180">
+<attribute name="NAME" x="146.05" y="-21.8186" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="146.05" y="-17.018" size="1.778" layer="96" rot="R180"/>
+</instance>
 <instance part="U$3" gate="G$1" x="-180.34" y="15.24"/>
-<instance part="LDO" gate="TSR-1-2450$1" x="-180.34" y="-10.16"/>
-<instance part="C3" gate="G$1" x="-193.04" y="-15.24"/>
-<instance part="C1" gate="C$1" x="-40.64" y="10.16"/>
-<instance part="C2" gate="G$1" x="-215.9" y="10.16"/>
-<instance part="R5" gate="G$1" x="43.18" y="-33.02"/>
-<instance part="R6" gate="G$1" x="35.56" y="-25.4" rot="R90"/>
-<instance part="R7" gate="G$1" x="35.56" y="-40.64" rot="R90"/>
-<instance part="SCHOTTKY" gate="G$1" x="218.44" y="17.78" rot="R90"/>
-<instance part="RSENSE1" gate="G$1" x="182.88" y="-60.96" rot="R90"/>
+<instance part="LDO" gate="TSR-1-2450$1" x="-180.34" y="-10.16">
+<attribute name="NAME" x="-177.8" y="-17.78" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-177.8" y="-20.32" size="1.778" layer="96"/>
+</instance>
+<instance part="C3" gate="G$1" x="-193.04" y="-15.24">
+<attribute name="NAME" x="-192.024" y="-14.605" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-192.024" y="-19.431" size="1.778" layer="96"/>
+</instance>
+<instance part="C1" gate="C$1" x="-40.64" y="10.16">
+<attribute name="NAME" x="-39.116" y="10.541" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-39.116" y="5.461" size="1.778" layer="96"/>
+</instance>
+<instance part="C2" gate="G$1" x="-215.9" y="10.16">
+<attribute name="NAME" x="-214.884" y="10.795" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-214.884" y="5.969" size="1.778" layer="96"/>
+</instance>
+<instance part="R5" gate="G$1" x="43.18" y="-33.02">
+<attribute name="NAME" x="39.37" y="-31.5214" size="1.778" layer="95"/>
+<attribute name="VALUE" x="39.37" y="-36.322" size="1.778" layer="96"/>
+</instance>
+<instance part="R6" gate="G$1" x="35.56" y="-25.4" rot="R90">
+<attribute name="NAME" x="34.0614" y="-29.21" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="38.862" y="-29.21" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="R7" gate="G$1" x="35.56" y="-40.64" rot="R90">
+<attribute name="NAME" x="34.0614" y="-44.45" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="38.862" y="-44.45" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="SCHOTTKY" gate="G$1" x="200.66" y="15.24" rot="R90">
+<attribute name="NAME" x="198.755" y="12.954" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="204.089" y="12.954" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="RSENSE1" gate="G$1" x="165.1" y="-63.5" rot="R90">
+<attribute name="NAME" x="163.6014" y="-67.31" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="168.402" y="-67.31" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -12904,17 +12977,17 @@ a breakout board that docks for this BUCK</text>
 <segment>
 <pinref part="LS_FET" gate="G$1" pin="D"/>
 <pinref part="HS_FET" gate="G$1" pin="S"/>
-<wire x1="193.04" y1="-5.08" x2="193.04" y2="0" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="-7.62" x2="175.26" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="MOTOR" gate="G$1" pin="P$2"/>
-<wire x1="193.04" y1="0" x2="193.04" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="7.62" x2="238.76" y2="0" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="0" x2="218.44" y2="0" width="0.1524" layer="91"/>
-<junction x="193.04" y="0"/>
-<label x="193.04" y="0" size="1.778" layer="95"/>
+<wire x1="175.26" y1="-2.54" x2="175.26" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="5.08" x2="220.98" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="-2.54" x2="200.66" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="175.26" y="-2.54"/>
+<label x="175.26" y="-2.54" size="1.778" layer="95"/>
 <pinref part="SCHOTTKY" gate="G$1" pin="A"/>
-<wire x1="218.44" y1="0" x2="193.04" y2="0" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="15.24" x2="218.44" y2="0" width="0.1524" layer="91"/>
-<junction x="218.44" y="0"/>
+<wire x1="200.66" y1="-2.54" x2="175.26" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="12.7" x2="200.66" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="200.66" y="-2.54"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="14_OUT"/>
@@ -12927,19 +13000,19 @@ a breakout board that docks for this BUCK</text>
 <net name="VBUS" class="0">
 <segment>
 <pinref part="HS_FET" gate="G$1" pin="D"/>
-<wire x1="193.04" y1="33.02" x2="193.04" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="30.48" x2="175.26" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="BATTERY" gate="G$1" pin="+"/>
-<wire x1="114.3" y1="-5.08" x2="114.3" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="40.64" x2="193.04" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="-7.62" x2="96.52" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="38.1" x2="175.26" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="MOTOR" gate="G$1" pin="P$1"/>
-<wire x1="193.04" y1="40.64" x2="218.44" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="218.44" y1="40.64" x2="238.76" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="238.76" y1="40.64" x2="238.76" y2="33.02" width="0.1524" layer="91"/>
-<junction x="193.04" y="40.64"/>
-<label x="114.3" y="-2.54" size="1.778" layer="95"/>
+<wire x1="175.26" y1="38.1" x2="200.66" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="200.66" y1="38.1" x2="220.98" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="38.1" x2="220.98" y2="30.48" width="0.1524" layer="91"/>
+<junction x="175.26" y="38.1"/>
+<label x="96.52" y="-5.08" size="1.778" layer="95"/>
 <pinref part="SCHOTTKY" gate="G$1" pin="C"/>
-<wire x1="218.44" y1="20.32" x2="218.44" y2="40.64" width="0.1524" layer="91"/>
-<junction x="218.44" y="40.64"/>
+<wire x1="200.66" y1="17.78" x2="200.66" y2="38.1" width="0.1524" layer="91"/>
+<junction x="200.66" y="38.1"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="VI+"/>
@@ -12959,8 +13032,8 @@ a breakout board that docks for this BUCK</text>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="154.94" y1="-17.78" x2="149.86" y2="-17.78" width="0.1524" layer="91"/>
-<label x="147.32" y="-17.78" size="1.778" layer="95"/>
+<wire x1="137.16" y1="-20.32" x2="132.08" y2="-20.32" width="0.1524" layer="91"/>
+<label x="129.54" y="-20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="HVG" class="0">
@@ -12972,8 +13045,8 @@ a breakout board that docks for this BUCK</text>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="154.94" y1="20.32" x2="149.86" y2="20.32" width="0.1524" layer="91"/>
-<label x="147.32" y="20.32" size="1.778" layer="95"/>
+<wire x1="137.16" y1="17.78" x2="132.08" y2="17.78" width="0.1524" layer="91"/>
+<label x="129.54" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VBOOT" class="0">
@@ -12987,12 +13060,12 @@ a breakout board that docks for this BUCK</text>
 <net name="RSENSE+" class="0">
 <segment>
 <pinref part="LS_FET" gate="G$1" pin="S"/>
-<wire x1="193.04" y1="-30.48" x2="193.04" y2="-55.88" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="-33.02" x2="175.26" y2="-58.42" width="0.1524" layer="91"/>
 <pinref part="CURR_RES1" gate="G$1" pin="2"/>
-<wire x1="193.04" y1="-55.88" x2="203.2" y2="-55.88" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="-55.88" x2="193.04" y2="-55.88" width="0.1524" layer="91"/>
-<junction x="193.04" y="-55.88"/>
-<label x="193.04" y="-45.72" size="1.778" layer="95" xref="yes"/>
+<wire x1="175.26" y1="-58.42" x2="185.42" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="-58.42" x2="175.26" y2="-58.42" width="0.1524" layer="91"/>
+<junction x="175.26" y="-58.42"/>
+<label x="175.26" y="-48.26" size="1.778" layer="95" xref="yes"/>
 <pinref part="RSENSE1" gate="G$1" pin="2"/>
 </segment>
 <segment>
@@ -13010,16 +13083,16 @@ a breakout board that docks for this BUCK</text>
 <net name="PGND" class="0">
 <segment>
 <pinref part="CURR_RES1" gate="G$1" pin="1"/>
-<wire x1="203.2" y1="-66.04" x2="193.04" y2="-66.04" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="-66.04" x2="182.88" y2="-66.04" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="-66.04" x2="193.04" y2="-76.2" width="0.1524" layer="91"/>
-<junction x="193.04" y="-66.04"/>
+<wire x1="185.42" y1="-68.58" x2="175.26" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="-68.58" x2="165.1" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="-68.58" x2="175.26" y2="-78.74" width="0.1524" layer="91"/>
+<junction x="175.26" y="-68.58"/>
 <pinref part="BATTERY" gate="G$1" pin="-"/>
-<wire x1="114.3" y1="-17.78" x2="114.3" y2="-66.04" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="-66.04" x2="114.3" y2="-66.04" width="0.1524" layer="91"/>
-<label x="193.04" y="-76.2" size="1.778" layer="95"/>
+<wire x1="96.52" y1="-20.32" x2="96.52" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="-68.58" x2="96.52" y2="-68.58" width="0.1524" layer="91"/>
+<label x="175.26" y="-78.74" size="1.778" layer="95"/>
 <pinref part="RSENSE1" gate="G$1" pin="1"/>
-<junction x="182.88" y="-66.04"/>
+<junction x="165.1" y="-68.58"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
@@ -13234,17 +13307,15 @@ a breakout board that docks for this BUCK</text>
 <net name="N$2" class="0">
 <segment>
 <pinref part="HS_FET" gate="G$1" pin="G"/>
-<wire x1="177.8" y1="20.32" x2="172.72" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="165.1" y1="20.32" x2="172.72" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="17.78" x2="160.02" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="LS_FET" gate="G$1" pin="G"/>
-<wire x1="177.8" y1="-17.78" x2="172.72" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="165.1" y1="-17.78" x2="172.72" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="-20.32" x2="160.02" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="5V" class="0">
