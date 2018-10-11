@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.1">
+<eagle version="9.1.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -194,24 +194,38 @@
 <text x="0" y="7.135" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-7.135" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
-<package name="TO254P1054X240-3" urn="urn:adsk.eagle:footprint:5424587/1">
-<description>3-TO, DPAK, 2.54 mm pitch, 10.54 mm span, 8.39 X 7.01 X 2.40 mm body
-&lt;p&gt;3-pin TO, DPAK package with 2.54 mm pitch, 10.54 mm span with body size 8.39 X 7.01 X 2.40 mm&lt;/p&gt;</description>
-<circle x="-4.7924" y="2.2166" radius="0.25" width="0" layer="21"/>
-<wire x1="4.425" y1="3.1349" x2="4.425" y2="4.26" width="0.12" layer="21"/>
-<wire x1="4.425" y1="4.26" x2="-2.715" y2="4.26" width="0.12" layer="21"/>
-<wire x1="-2.715" y1="4.26" x2="-2.715" y2="-4.26" width="0.12" layer="21"/>
-<wire x1="-2.715" y1="-4.26" x2="4.425" y2="-4.26" width="0.12" layer="21"/>
-<wire x1="4.425" y1="-4.26" x2="4.425" y2="-3.1349" width="0.12" layer="21"/>
-<wire x1="4.425" y1="-4.26" x2="-2.715" y2="-4.26" width="0.12" layer="51"/>
-<wire x1="-2.715" y1="-4.26" x2="-2.715" y2="4.26" width="0.12" layer="51"/>
-<wire x1="-2.715" y1="4.26" x2="4.425" y2="4.26" width="0.12" layer="51"/>
-<wire x1="4.425" y1="4.26" x2="4.425" y2="-4.26" width="0.12" layer="51"/>
-<smd name="1" x="-4.7924" y="1.27" dx="1.8082" dy="0.8852" layer="1" roundness="40"/>
-<smd name="2" x="-4.7924" y="-1.27" dx="1.8082" dy="0.8852" layer="1" roundness="40"/>
-<smd name="3" x="2.185" y="0" dx="7.023" dy="5.7618" layer="1"/>
-<text x="0" y="4.895" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-4.895" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+<package name="TO-263/D2PAK" urn="urn:adsk.eagle:footprint:38425/1" locally_modified="yes">
+<wire x1="5" y1="-1" x2="5" y2="-3.4" width="0.2032" layer="21"/>
+<wire x1="5" y1="-3.4" x2="-5" y2="-3.4" width="0.2032" layer="21"/>
+<wire x1="-5" y1="-3.4" x2="-5" y2="-1" width="0.2032" layer="21"/>
+<wire x1="-5" y1="6.25" x2="-5" y2="-0.65" width="0.127" layer="51"/>
+<wire x1="5" y1="-0.65" x2="5" y2="6.25" width="0.127" layer="51"/>
+<wire x1="-1.81" y1="-3.4" x2="-1.81" y2="-7.6" width="0.127" layer="51"/>
+<wire x1="-1.81" y1="-7.6" x2="-3.27" y2="-7.6" width="0.127" layer="51"/>
+<wire x1="-3.27" y1="-7.6" x2="-3.27" y2="-3.4" width="0.127" layer="51"/>
+<wire x1="-3.27" y1="-3.4" x2="-1.81" y2="-3.4" width="0.127" layer="51"/>
+<wire x1="1.81" y1="-3.4" x2="1.81" y2="-7.6" width="0.127" layer="51"/>
+<wire x1="1.81" y1="-7.6" x2="3.27" y2="-7.6" width="0.127" layer="51"/>
+<wire x1="3.27" y1="-7.6" x2="3.27" y2="-3.4" width="0.127" layer="51"/>
+<wire x1="3.27" y1="-3.4" x2="1.81" y2="-3.4" width="0.127" layer="51"/>
+<rectangle x1="-3.27" y1="-7.6" x2="-1.81" y2="-3.4" layer="51"/>
+<rectangle x1="-0.73" y1="-4.9" x2="0.73" y2="-3.4" layer="21"/>
+<rectangle x1="1.81" y1="-7.6" x2="3.27" y2="-3.4" layer="51"/>
+<rectangle x1="-3.27" y1="-4.9" x2="-1.81" y2="-3.4" layer="21"/>
+<rectangle x1="1.81" y1="-4.9" x2="3.27" y2="-3.4" layer="21"/>
+<smd name="1" x="-2.54" y="-7.045" dx="2.32" dy="4.5" layer="1"/>
+<smd name="3" x="2.54" y="-7.045" dx="2.32" dy="4.5" layer="1"/>
+<smd name="2" x="0" y="4.125" dx="11" dy="9.65" layer="1"/>
+<text x="-5.715" y="0" size="0.6096" layer="25" font="vector" ratio="20" rot="R90" align="bottom-center">&gt;NAME</text>
+<text x="5.715" y="0" size="0.6096" layer="27" font="vector" ratio="20" rot="R90" align="top-center">&gt;VALUE</text>
+<polygon width="0.1998" layer="51">
+<vertex x="-5" y="6.25"/>
+<vertex x="-5" y="7"/>
+<vertex x="-1" y="7.65"/>
+<vertex x="1" y="7.65"/>
+<vertex x="5" y="7"/>
+<vertex x="5" y="6.25"/>
+</polygon>
 </package>
 </packages>
 <packages3d>
@@ -222,11 +236,9 @@
 <packageinstance name="SOIC127P1032X265-16"/>
 </packageinstances>
 </package3d>
-<package3d name="TO254P1054X240-3" urn="urn:adsk.eagle:package:5424572/1" type="model">
-<description>3-TO, DPAK, 2.54 mm pitch, 10.54 mm span, 8.39 X 7.01 X 2.40 mm body
-&lt;p&gt;3-pin TO, DPAK package with 2.54 mm pitch, 10.54 mm span with body size 8.39 X 7.01 X 2.40 mm&lt;/p&gt;</description>
+<package3d name="TO-263/D2PAK" urn="urn:adsk.eagle:package:38457/1" locally_modified="yes" type="box">
 <packageinstances>
-<packageinstance name="TO254P1054X240-3"/>
+<packageinstance name="TO-263/D2PAK"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -319,14 +331,14 @@
 <gate name="G$1" symbol="FET-N" x="-10.16" y="0"/>
 </gates>
 <devices>
-<device name="D2PAK" package="TO254P1054X240-3">
+<device name="TO263/D2PAK" package="TO-263/D2PAK">
 <connects>
-<connect gate="G$1" pin="D" pad="3"/>
+<connect gate="G$1" pin="D" pad="2"/>
 <connect gate="G$1" pin="G" pad="1"/>
-<connect gate="G$1" pin="S" pad="2"/>
+<connect gate="G$1" pin="S" pad="3"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:5424572/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:38457/1"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -1763,38 +1775,6 @@ Source: AVX .. aphvc.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="ngspice-simulation" urn="urn:adsk.eagle:library:527439">
-<description>SPICE compatible library parts</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="0" urn="urn:adsk.eagle:symbol:527455/1" library_version="16">
-<description>Simulation ground symbol (spice node 0)</description>
-<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
-<wire x1="2.54" y1="0" x2="0" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="-2.54" x2="-2.54" y2="0" width="0.1524" layer="94"/>
-<pin name="0" x="0" y="0" visible="off" length="point" direction="sup"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="GND" urn="urn:adsk.eagle:component:527478/1" prefix="X_" library_version="16">
-<description>Simulation ground symbol (spice node 0)</description>
-<gates>
-<gate name="G$1" symbol="0" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name="">
-<attribute name="SPICEGROUND" value=""/>
-<attribute name="_EXTERNAL_" value=""/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="motor controller rev 3.0.6" urn="urn:adsk.eagle:library:1622728">
 <description>Generated from &lt;b&gt;motor controller rev 3.0.6.sch&lt;/b&gt;&lt;p&gt;
 by exp-lbrs-replace2.ulp</description>
@@ -2362,46 +2342,39 @@ by exp-lbrs-replace2.ulp</description>
 </classes>
 <parts>
 <part name="U$1" library="motocontro_rev_4" deviceset="L6390_DRIVER" device="" package3d_urn="urn:adsk.eagle:package:5422465/1"/>
-<part name="HS_FET" library="motocontro_rev_4" deviceset="FDB86360_NFET" device="D2PAK" package3d_urn="urn:adsk.eagle:package:5424572/1"/>
-<part name="LS_FET" library="motocontro_rev_4" deviceset="FDB86360_NFET" device="D2PAK" package3d_urn="urn:adsk.eagle:package:5424572/1"/>
+<part name="HS_FET" library="motocontro_rev_4" deviceset="FDB86360_NFET" device="TO263/D2PAK" package3d_urn="urn:adsk.eagle:package:38457/1"/>
+<part name="LS_FET" library="motocontro_rev_4" deviceset="FDB86360_NFET" device="TO263/D2PAK" package3d_urn="urn:adsk.eagle:package:38457/1"/>
 <part name="CURR_RES" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R6332" package3d_urn="urn:adsk.eagle:package:13307/1" value="40 mOhm "/>
-<part name="X_1" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
-<part name="X_2" library="ngspice-simulation" library_urn="urn:adsk.eagle:library:527439" deviceset="GND" device=""/>
 <part name="BATTERY" library="motor controller rev 3.0.6" library_urn="urn:adsk.eagle:library:1622728" deviceset="BATTERY" device="" package3d_urn="urn:adsk.eagle:package:1622996/1" value="48V "/>
 <part name="MOTOR" library="motor controller rev 3.0.6" library_urn="urn:adsk.eagle:library:1622728" deviceset="MOTOR" device="" package3d_urn="urn:adsk.eagle:package:1622996/1"/>
 <part name="CBOOT" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="C" device="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="1 uF "/>
 <part name="U$2" library="Teensy356" deviceset="TEENSY_3.5/3.6" device=""/>
 <part name="CURR_RES1" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R6332" package3d_urn="urn:adsk.eagle:package:13307/1" value="40 mOhm "/>
+<part name="RDT" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R2012" package3d_urn="urn:adsk.eagle:package:13306/1" value="75.5k"/>
+<part name="CDT" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="C" device="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="100nF"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="-43.18" y="38.1" size="1.778" layer="91">Need: PWM pins, OPAMP pin, OPAMP filter, #SD pin.</text>
+<text x="-48.26" y="43.18" size="1.778" layer="94">PGND is used for the power ground. DGND is used for the digital logic</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="0" y="0"/>
 <instance part="HS_FET" gate="G$1" x="132.08" y="15.24"/>
 <instance part="LS_FET" gate="G$1" x="132.08" y="-22.86"/>
 <instance part="CURR_RES" gate="G$1" x="137.16" y="-66.04" rot="R90"/>
-<instance part="X_1" gate="G$1" x="-22.86" y="-25.4"/>
-<instance part="X_2" gate="G$1" x="147.32" y="-81.28"/>
 <instance part="BATTERY" gate="G$1" x="68.58" y="-10.16"/>
 <instance part="MOTOR" gate="G$1" x="203.2" y="15.24"/>
 <instance part="CBOOT" gate="G$1" x="35.56" y="15.24"/>
 <instance part="U$2" gate="G$1" x="-76.2" y="12.7"/>
 <instance part="CURR_RES1" gate="G$1" x="157.48" y="-66.04" rot="R90"/>
+<instance part="RDT" gate="G$1" x="-33.02" y="-10.16" rot="R90"/>
+<instance part="CDT" gate="G$1" x="-48.26" y="-10.16"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="0" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="8_GND"/>
-<wire x1="-17.78" y1="-17.78" x2="-22.86" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="-22.86" y1="-17.78" x2="-22.86" y2="-25.4" width="0.1524" layer="91"/>
-<pinref part="X_1" gate="G$1" pin="0"/>
-</segment>
-</net>
 <net name="OUT" class="0">
 <segment>
 <pinref part="LS_FET" gate="G$1" pin="D"/>
@@ -2484,12 +2457,11 @@ by exp-lbrs-replace2.ulp</description>
 <label x="25.4" y="-12.7" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="RSENSE-" class="0">
+<net name="PGND" class="0">
 <segment>
 <pinref part="CURR_RES1" gate="G$1" pin="1"/>
 <pinref part="CURR_RES" gate="G$1" pin="1"/>
 <wire x1="157.48" y1="-71.12" x2="147.32" y2="-71.12" width="0.1524" layer="91"/>
-<pinref part="X_2" gate="G$1" pin="0"/>
 <wire x1="147.32" y1="-71.12" x2="137.16" y2="-71.12" width="0.1524" layer="91"/>
 <wire x1="147.32" y1="-71.12" x2="147.32" y2="-81.28" width="0.1524" layer="91"/>
 <junction x="147.32" y="-71.12"/>
@@ -2497,7 +2469,7 @@ by exp-lbrs-replace2.ulp</description>
 <wire x1="68.58" y1="-22.86" x2="68.58" y2="-71.12" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="-71.12" x2="68.58" y2="-71.12" width="0.1524" layer="91"/>
 <junction x="137.16" y="-71.12"/>
-<label x="147.32" y="-76.2" size="1.778" layer="95" xref="yes"/>
+<label x="147.32" y="-81.28" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -2530,15 +2502,21 @@ by exp-lbrs-replace2.ulp</description>
 <net name="OP-" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="6_OP-"/>
-<wire x1="-17.78" y1="-7.62" x2="-33.02" y2="-7.62" width="0.1524" layer="91"/>
-<label x="-33.02" y="-7.62" size="1.778" layer="95"/>
+<wire x1="-17.78" y1="-7.62" x2="-27.94" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-27.94" y="-7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="DT" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="5_DT"/>
-<wire x1="-17.78" y1="-2.54" x2="-33.02" y2="-2.54" width="0.1524" layer="91"/>
 <label x="-33.02" y="-2.54" size="1.778" layer="95"/>
+<pinref part="CDT" gate="G$1" pin="1"/>
+<wire x1="-48.26" y1="-7.62" x2="-48.26" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="-2.54" x2="-33.02" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="RDT" gate="G$1" pin="2"/>
+<wire x1="-33.02" y1="-2.54" x2="-17.78" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="-5.08" x2="-33.02" y2="-2.54" width="0.1524" layer="91"/>
+<junction x="-33.02" y="-2.54"/>
 </segment>
 </net>
 <net name="V_CC" class="0">
@@ -2546,6 +2524,41 @@ by exp-lbrs-replace2.ulp</description>
 <pinref part="U$1" gate="G$1" pin="4_VCC"/>
 <wire x1="-17.78" y1="2.54" x2="-33.02" y2="2.54" width="0.1524" layer="91"/>
 <label x="-33.02" y="2.54" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="DGND" class="0">
+<segment>
+<pinref part="CDT" gate="G$1" pin="2"/>
+<pinref part="RDT" gate="G$1" pin="1"/>
+<wire x1="-48.26" y1="-15.24" x2="-40.64" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-15.24" x2="-33.02" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="-15.24" x2="-40.64" y2="-20.32" width="0.1524" layer="91"/>
+<junction x="-40.64" y="-15.24"/>
+<label x="-40.64" y="-20.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="8_GND"/>
+<wire x1="-17.78" y1="-17.78" x2="-22.86" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="-17.78" x2="-22.86" y2="-25.4" width="0.1524" layer="91"/>
+<label x="-22.86" y="-25.4" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<wire x1="-96.52" y1="25.4" x2="-106.68" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="25.4" x2="-106.68" y2="22.86" width="0.1524" layer="91"/>
+<label x="-106.68" y="22.86" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="AGND"/>
+<wire x1="-55.88" y1="22.86" x2="-50.8" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="22.86" x2="-50.8" y2="20.32" width="0.1524" layer="91"/>
+<label x="-50.8" y="20.32" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="GND3"/>
+<wire x1="-76.2" y1="-50.8" x2="-76.2" y2="-55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

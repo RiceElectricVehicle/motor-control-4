@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.3">
+<eagle version="9.1.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2365,7 +2365,7 @@ by exp-lbrs-replace2.ulp</description>
 <plain>
 <text x="-43.18" y="38.1" size="1.778" layer="91">Need: PWM pins, OPAMP pin, OPAMP filter, #SD pin.</text>
 <text x="-48.26" y="43.18" size="1.778" layer="94">PGND is used for the power ground. DGND is used for the digital logic</text>
-<text x="99.06" y="-7.62" size="1.778" layer="94">R3, R4 for potential current limit to the gates.
+<text x="76.2" y="-2.54" size="1.778" layer="94">R3, R4 for potential current limit to the gates.
 This increases transient times 
 which reduces inductive spikes
 Need to find appropriate package</text>
@@ -2373,8 +2373,12 @@ Need to find appropriate package</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="0" y="0"/>
-<instance part="HS_FET" gate="G$1" x="132.08" y="15.24"/>
-<instance part="LS_FET" gate="G$1" x="132.08" y="-22.86"/>
+<instance part="HS_FET" gate="G$1" x="132.08" y="15.24" smashed="yes">
+<attribute name="NAME" x="152.4" y="20.32" size="1.778" layer="94"/>
+</instance>
+<instance part="LS_FET" gate="G$1" x="132.08" y="-22.86" smashed="yes">
+<attribute name="NAME" x="152.4" y="-17.78" size="1.778" layer="94"/>
+</instance>
 <instance part="CURR_RES" gate="G$1" x="137.16" y="-66.04" rot="R90"/>
 <instance part="BATTERY" gate="G$1" x="68.58" y="-10.16"/>
 <instance part="MOTOR" gate="G$1" x="203.2" y="15.24"/>
