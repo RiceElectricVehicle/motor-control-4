@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.1">
+<eagle version="9.1.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -227,6 +227,24 @@
 <vertex x="5" y="6.25"/>
 </polygon>
 </package>
+<package name="GE_STINGRAY">
+<wire x1="-3.6" y1="-3.8" x2="-3.6" y2="19.04" width="0.1524" layer="21"/>
+<wire x1="-3.6" y1="19.04" x2="54.4" y2="19.04" width="0.1524" layer="21"/>
+<wire x1="54.4" y1="19.04" x2="54.4" y2="-3.8" width="0.1524" layer="21"/>
+<wire x1="54.4" y1="-3.8" x2="-3.6" y2="-3.8" width="0.1524" layer="21"/>
+<wire x1="54.33" y1="1.73" x2="54.34" y2="3.79" width="0.1524" layer="21" curve="-183.892299"/>
+<dimension x1="-3.6" y1="19.04" x2="54.4" y2="19.04" x3="25.4" y3="23" textsize="1.778" layer="21"/>
+<dimension x1="-3.6" y1="-3.8" x2="-3.6" y2="19.04" x3="-7" y3="7.62" textsize="1.778" layer="21"/>
+<pad name="VI-" x="0" y="0" drill="1.2" shape="long"/>
+<pad name="ON/OFF" x="0" y="7.62" drill="1.2" shape="long"/>
+<pad name="VI+" x="0" y="15.24" drill="1.2" shape="long"/>
+<pad name="SENSE-" x="50.8" y="3.81" drill="1.2" shape="long"/>
+<pad name="TRIM" x="50.8" y="7.62" drill="1.2" shape="long"/>
+<pad name="SENSE+" x="50.8" y="11.43" drill="1.2" shape="long"/>
+<pad name="VO-" x="50.8" y="0" drill="1.65" shape="long"/>
+<pad name="VO+" x="50.8" y="15.24" drill="1.65" shape="long"/>
+<text x="7" y="16" size="1.778" layer="21">GE STINGRAY H</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="SOIC127P1032X265-16" urn="urn:adsk.eagle:package:5422465/1" type="model">
@@ -291,6 +309,22 @@
 <text x="20.32" y="2.54" size="1.778" layer="94">&gt;VALUE</text>
 <text x="20.32" y="-2.54" size="1.778" layer="94">&gt;SPICEEXTRA</text>
 </symbol>
+<symbol name="GE_STINGRAY_SYM">
+<wire x1="-12.7" y1="15.24" x2="-12.7" y2="-15.24" width="0.1524" layer="94"/>
+<wire x1="-12.7" y1="-15.24" x2="12.7" y2="-15.24" width="0.1524" layer="94"/>
+<wire x1="12.7" y1="-15.24" x2="12.7" y2="15.24" width="0.1524" layer="94"/>
+<wire x1="12.7" y1="15.24" x2="-12.7" y2="15.24" width="0.1524" layer="94"/>
+<pin name="VI+" x="-17.78" y="2.54" length="middle"/>
+<pin name="ON/OFF" x="-17.78" y="-5.08" length="middle"/>
+<pin name="VI-" x="-17.78" y="-12.7" length="middle"/>
+<pin name="VO-" x="17.78" y="-12.7" length="middle" rot="R180"/>
+<pin name="VO+" x="17.78" y="7.62" length="middle" rot="R180"/>
+<pin name="SENSE+" x="17.78" y="2.54" length="middle" rot="R180"/>
+<pin name="TRIM" x="17.78" y="-2.54" length="middle" rot="R180"/>
+<pin name="SENSE-" x="17.78" y="-7.62" length="middle" rot="R180"/>
+<text x="-7.62" y="10.16" size="1.778" layer="94">GE STINGRAY
+     BUCK </text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="L6390_DRIVER">
@@ -340,6 +374,28 @@
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:38457/1"/>
 </package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GE_STINGRAY_H">
+<gates>
+<gate name="G$1" symbol="GE_STINGRAY_SYM" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="GE_STINGRAY">
+<connects>
+<connect gate="G$1" pin="ON/OFF" pad="ON/OFF"/>
+<connect gate="G$1" pin="SENSE+" pad="SENSE+"/>
+<connect gate="G$1" pin="SENSE-" pad="SENSE-"/>
+<connect gate="G$1" pin="TRIM" pad="TRIM"/>
+<connect gate="G$1" pin="VI+" pad="VI+"/>
+<connect gate="G$1" pin="VI-" pad="VI-"/>
+<connect gate="G$1" pin="VO+" pad="VO+"/>
+<connect gate="G$1" pin="VO-" pad="VO-"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -2359,41 +2415,49 @@ by exp-lbrs-replace2.ulp</description>
 <part name="CSD" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="C" device="C1206" package3d_urn="urn:adsk.eagle:package:13279/1"/>
 <part name="R3" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R2012" package3d_urn="urn:adsk.eagle:package:13306/1"/>
 <part name="R4" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R2012" package3d_urn="urn:adsk.eagle:package:13306/1"/>
+<part name="U$3" library="motocontro_rev_4" deviceset="GE_STINGRAY_H" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="-43.18" y="38.1" size="1.778" layer="91">Need: PWM pins, OPAMP pin, OPAMP filter, #SD pin.</text>
-<text x="-48.26" y="43.18" size="1.778" layer="94">PGND is used for the power ground. DGND is used for the digital logic</text>
-<text x="76.2" y="-2.54" size="1.778" layer="94">R3, R4 for potential current limit to the gates.
+<text x="-33.02" y="33.02" size="1.778" layer="91">Need: PWM pins #SD pin.</text>
+<text x="-48.26" y="43.18" size="1.778" layer="94">PGND is used for the power ground. 
+DGND is used for the digital logic</text>
+<text x="91.44" y="-7.62" size="1.778" layer="94">R3, R4 for potential current limit to the gates.
 This increases transient times 
 which reduces inductive spikes
 Need to find appropriate package</text>
-<text x="167.64" y="-66.04" size="1.778" layer="94">Get Rsense package from previous REV</text>
+<text x="182.88" y="-71.12" size="1.778" layer="94">Get Rsense package from previous REV</text>
+<text x="236.22" y="20.32" size="1.778" layer="94">Must make a Schottky diode part 
+Check BOM </text>
+<text x="-170.18" y="40.64" size="1.778" layer="94">Made this part for the Stingray 
+We actually stilll need to make 
+a breakout board that docks for this BUCK</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="0" y="0"/>
-<instance part="HS_FET" gate="G$1" x="132.08" y="15.24" smashed="yes">
-<attribute name="NAME" x="152.4" y="20.32" size="1.778" layer="94"/>
+<instance part="HS_FET" gate="G$1" x="147.32" y="10.16" smashed="yes">
+<attribute name="NAME" x="167.64" y="15.24" size="1.778" layer="94"/>
 </instance>
-<instance part="LS_FET" gate="G$1" x="132.08" y="-22.86" smashed="yes">
-<attribute name="NAME" x="152.4" y="-17.78" size="1.778" layer="94"/>
+<instance part="LS_FET" gate="G$1" x="147.32" y="-27.94" smashed="yes">
+<attribute name="NAME" x="167.64" y="-22.86" size="1.778" layer="94"/>
 </instance>
-<instance part="CURR_RES" gate="G$1" x="137.16" y="-66.04" rot="R90"/>
-<instance part="BATTERY" gate="G$1" x="68.58" y="-10.16"/>
-<instance part="MOTOR" gate="G$1" x="203.2" y="15.24"/>
+<instance part="CURR_RES" gate="G$1" x="152.4" y="-71.12" rot="R90"/>
+<instance part="BATTERY" gate="G$1" x="83.82" y="-15.24"/>
+<instance part="MOTOR" gate="G$1" x="218.44" y="10.16"/>
 <instance part="CBOOT" gate="G$1" x="35.56" y="15.24"/>
 <instance part="U$2" gate="G$1" x="-76.2" y="12.7"/>
-<instance part="CURR_RES1" gate="G$1" x="157.48" y="-66.04" rot="R90"/>
-<instance part="RDT" gate="G$1" x="35.56" y="-45.72" rot="R90"/>
-<instance part="CDT" gate="G$1" x="20.32" y="-45.72"/>
+<instance part="CURR_RES1" gate="G$1" x="172.72" y="-71.12" rot="R90"/>
+<instance part="RDT" gate="G$1" x="48.26" y="-53.34" rot="R90"/>
+<instance part="CDT" gate="G$1" x="33.02" y="-53.34"/>
 <instance part="R2" gate="G$1" x="-27.94" y="-43.18" rot="R180"/>
 <instance part="R1" gate="G$1" x="-7.62" y="-45.72" rot="R180"/>
 <instance part="CDT1" gate="G$1" x="-25.4" y="-50.8" rot="R270"/>
-<instance part="RSD" gate="G$1" x="-27.94" y="-68.58" rot="R180"/>
-<instance part="CSD" gate="G$1" x="-10.16" y="-68.58" rot="R270"/>
-<instance part="R3" gate="G$1" x="114.3" y="15.24" rot="R180"/>
-<instance part="R4" gate="G$1" x="114.3" y="-22.86" rot="R180"/>
+<instance part="RSD" gate="G$1" x="-38.1" y="-83.82" rot="R180"/>
+<instance part="CSD" gate="G$1" x="-20.32" y="-83.82" rot="R270"/>
+<instance part="R3" gate="G$1" x="129.54" y="10.16" rot="R180"/>
+<instance part="R4" gate="G$1" x="129.54" y="-27.94" rot="R180"/>
+<instance part="U$3" gate="G$1" x="-154.94" y="20.32"/>
 </instances>
 <busses>
 </busses>
@@ -2402,13 +2466,13 @@ Need to find appropriate package</text>
 <segment>
 <pinref part="LS_FET" gate="G$1" pin="D"/>
 <pinref part="HS_FET" gate="G$1" pin="S"/>
-<wire x1="147.32" y1="-10.16" x2="147.32" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="-15.24" x2="162.56" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="MOTOR" gate="G$1" pin="P$2"/>
-<wire x1="147.32" y1="-5.08" x2="147.32" y2="2.54" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="2.54" x2="203.2" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="-5.08" x2="147.32" y2="-5.08" width="0.1524" layer="91"/>
-<junction x="147.32" y="-5.08"/>
-<label x="147.32" y="-5.08" size="1.778" layer="95"/>
+<wire x1="162.56" y1="-10.16" x2="162.56" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="-2.54" x2="218.44" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="-10.16" x2="162.56" y2="-10.16" width="0.1524" layer="91"/>
+<junction x="162.56" y="-10.16"/>
+<label x="162.56" y="-10.16" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="14_OUT"/>
@@ -2421,14 +2485,14 @@ Need to find appropriate package</text>
 <net name="N$4" class="0">
 <segment>
 <pinref part="HS_FET" gate="G$1" pin="D"/>
-<wire x1="147.32" y1="27.94" x2="147.32" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="22.86" x2="162.56" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="BATTERY" gate="G$1" pin="+"/>
-<wire x1="68.58" y1="-10.16" x2="68.58" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="35.56" x2="147.32" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="-15.24" x2="83.82" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="30.48" x2="162.56" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="MOTOR" gate="G$1" pin="P$1"/>
-<wire x1="147.32" y1="35.56" x2="203.2" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="35.56" x2="203.2" y2="27.94" width="0.1524" layer="91"/>
-<junction x="147.32" y="35.56"/>
+<wire x1="162.56" y1="30.48" x2="218.44" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="30.48" x2="218.44" y2="22.86" width="0.1524" layer="91"/>
+<junction x="162.56" y="30.48"/>
 </segment>
 </net>
 <net name="LVG" class="0">
@@ -2439,8 +2503,8 @@ Need to find appropriate package</text>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
-<wire x1="109.22" y1="-22.86" x2="104.14" y2="-22.86" width="0.1524" layer="91"/>
-<label x="101.6" y="-22.86" size="1.778" layer="95"/>
+<wire x1="124.46" y1="-27.94" x2="119.38" y2="-27.94" width="0.1524" layer="91"/>
+<label x="116.84" y="-27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="HVG" class="0">
@@ -2451,8 +2515,8 @@ Need to find appropriate package</text>
 </segment>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="109.22" y1="15.24" x2="104.14" y2="15.24" width="0.1524" layer="91"/>
-<label x="101.6" y="15.24" size="1.778" layer="95"/>
+<wire x1="124.46" y1="10.16" x2="119.38" y2="10.16" width="0.1524" layer="91"/>
+<label x="116.84" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="V_BOOT" class="0">
@@ -2466,13 +2530,13 @@ Need to find appropriate package</text>
 <net name="RSENSE+" class="0">
 <segment>
 <pinref part="LS_FET" gate="G$1" pin="S"/>
-<wire x1="147.32" y1="-35.56" x2="147.32" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="-40.64" x2="162.56" y2="-66.04" width="0.1524" layer="91"/>
 <pinref part="CURR_RES1" gate="G$1" pin="2"/>
-<wire x1="147.32" y1="-60.96" x2="157.48" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="-66.04" x2="172.72" y2="-66.04" width="0.1524" layer="91"/>
 <pinref part="CURR_RES" gate="G$1" pin="2"/>
-<wire x1="137.16" y1="-60.96" x2="147.32" y2="-60.96" width="0.1524" layer="91"/>
-<junction x="147.32" y="-60.96"/>
-<label x="147.32" y="-50.8" size="1.778" layer="95" xref="yes"/>
+<wire x1="152.4" y1="-66.04" x2="162.56" y2="-66.04" width="0.1524" layer="91"/>
+<junction x="162.56" y="-66.04"/>
+<label x="162.56" y="-55.88" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="10_CP+"/>
@@ -2489,27 +2553,20 @@ Need to find appropriate package</text>
 <segment>
 <pinref part="CURR_RES1" gate="G$1" pin="1"/>
 <pinref part="CURR_RES" gate="G$1" pin="1"/>
-<wire x1="157.48" y1="-71.12" x2="147.32" y2="-71.12" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="-71.12" x2="137.16" y2="-71.12" width="0.1524" layer="91"/>
-<wire x1="147.32" y1="-71.12" x2="147.32" y2="-81.28" width="0.1524" layer="91"/>
-<junction x="147.32" y="-71.12"/>
+<wire x1="172.72" y1="-76.2" x2="162.56" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="-76.2" x2="152.4" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="-76.2" x2="162.56" y2="-86.36" width="0.1524" layer="91"/>
+<junction x="162.56" y="-76.2"/>
 <pinref part="BATTERY" gate="G$1" pin="-"/>
-<wire x1="68.58" y1="-22.86" x2="68.58" y2="-71.12" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="-71.12" x2="68.58" y2="-71.12" width="0.1524" layer="91"/>
-<junction x="137.16" y="-71.12"/>
-<label x="147.32" y="-81.28" size="1.778" layer="95"/>
+<wire x1="83.82" y1="-27.94" x2="83.82" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="-76.2" x2="83.82" y2="-76.2" width="0.1524" layer="91"/>
+<junction x="152.4" y="-76.2"/>
+<label x="162.56" y="-86.36" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="-2.54" y1="-45.72" x2="5.08" y2="-45.72" width="0.1524" layer="91"/>
 <label x="2.54" y="-45.72" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="#LIN" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="1_LIN"/>
-<wire x1="-17.78" y1="17.78" x2="-33.02" y2="17.78" width="0.1524" layer="91"/>
-<label x="-33.02" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="#SD/OD" class="0">
@@ -2521,18 +2578,24 @@ Need to find appropriate package</text>
 <segment>
 <pinref part="RSD" gate="G$1" pin="1"/>
 <pinref part="CSD" gate="G$1" pin="2"/>
-<wire x1="-22.86" y1="-68.58" x2="-20.32" y2="-68.58" width="0.1524" layer="91"/>
-<wire x1="-20.32" y1="-68.58" x2="-15.24" y2="-68.58" width="0.1524" layer="91"/>
-<wire x1="-20.32" y1="-68.58" x2="-20.32" y2="-63.5" width="0.1524" layer="91"/>
-<junction x="-20.32" y="-68.58"/>
-<label x="-20.32" y="-63.5" size="1.778" layer="95"/>
+<wire x1="-33.02" y1="-83.82" x2="-30.48" y2="-83.82" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="-83.82" x2="-25.4" y2="-83.82" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="-83.82" x2="-30.48" y2="-78.74" width="0.1524" layer="91"/>
+<junction x="-30.48" y="-83.82"/>
+<label x="-30.48" y="-78.74" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="HIN" class="0">
+<net name="PWM" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="3_HIN"/>
 <wire x1="-17.78" y1="7.62" x2="-33.02" y2="7.62" width="0.1524" layer="91"/>
-<label x="-33.02" y="7.62" size="1.778" layer="95"/>
+<label x="-45.72" y="12.7" size="1.778" layer="95"/>
+<wire x1="-33.02" y1="7.62" x2="-38.1" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="7.62" x2="-38.1" y2="12.7" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="1_LIN"/>
+<wire x1="-17.78" y1="17.78" x2="-33.02" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="12.7" x2="-38.1" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="-38.1" y1="17.78" x2="-33.02" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="OP-" class="0">
@@ -2557,14 +2620,14 @@ Need to find appropriate package</text>
 <net name="DT" class="0">
 <segment>
 <pinref part="CDT" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="-43.18" x2="20.32" y2="-38.1" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="-38.1" x2="27.94" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="-50.8" x2="33.02" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="-45.72" x2="40.64" y2="-45.72" width="0.1524" layer="91"/>
 <pinref part="RDT" gate="G$1" pin="2"/>
-<wire x1="27.94" y1="-38.1" x2="35.56" y2="-38.1" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="-40.64" x2="35.56" y2="-38.1" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="-38.1" x2="27.94" y2="-33.02" width="0.1524" layer="91"/>
-<junction x="27.94" y="-38.1"/>
-<label x="27.94" y="-33.02" size="1.778" layer="95"/>
+<wire x1="40.64" y1="-45.72" x2="48.26" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="-48.26" x2="48.26" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-45.72" x2="40.64" y2="-40.64" width="0.1524" layer="91"/>
+<junction x="40.64" y="-45.72"/>
+<label x="40.64" y="-40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="5_DT"/>
@@ -2576,11 +2639,11 @@ Need to find appropriate package</text>
 <segment>
 <pinref part="CDT" gate="G$1" pin="2"/>
 <pinref part="RDT" gate="G$1" pin="1"/>
-<wire x1="20.32" y1="-50.8" x2="27.94" y2="-50.8" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="-50.8" x2="35.56" y2="-50.8" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="-50.8" x2="27.94" y2="-55.88" width="0.1524" layer="91"/>
-<junction x="27.94" y="-50.8"/>
-<label x="27.94" y="-55.88" size="1.778" layer="95"/>
+<wire x1="33.02" y1="-58.42" x2="40.64" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-58.42" x2="48.26" y2="-58.42" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="-58.42" x2="40.64" y2="-63.5" width="0.1524" layer="91"/>
+<junction x="40.64" y="-58.42"/>
+<label x="40.64" y="-63.5" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="8_GND"/>
@@ -2607,8 +2670,8 @@ Need to find appropriate package</text>
 </segment>
 <segment>
 <pinref part="CSD" gate="G$1" pin="1"/>
-<wire x1="-7.62" y1="-68.58" x2="0" y2="-68.58" width="0.1524" layer="91"/>
-<label x="0" y="-68.58" size="1.778" layer="95"/>
+<wire x1="-17.78" y1="-83.82" x2="-10.16" y2="-83.82" width="0.1524" layer="91"/>
+<label x="-10.16" y="-83.82" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -2638,9 +2701,9 @@ Need to find appropriate package</text>
 <net name="VCC" class="0">
 <segment>
 <pinref part="RSD" gate="G$1" pin="2"/>
-<wire x1="-33.02" y1="-68.58" x2="-40.64" y2="-68.58" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="-68.58" x2="-43.18" y2="-68.58" width="0.1524" layer="91"/>
-<label x="-43.18" y="-68.58" size="1.778" layer="95"/>
+<wire x1="-43.18" y1="-83.82" x2="-50.8" y2="-83.82" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="-83.82" x2="-53.34" y2="-83.82" width="0.1524" layer="91"/>
+<label x="-53.34" y="-83.82" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="4_VCC"/>
@@ -2651,17 +2714,17 @@ Need to find appropriate package</text>
 <net name="N$2" class="0">
 <segment>
 <pinref part="HS_FET" gate="G$1" pin="G"/>
-<wire x1="132.08" y1="15.24" x2="127" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="10.16" x2="142.24" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="119.38" y1="15.24" x2="127" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="10.16" x2="142.24" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="LS_FET" gate="G$1" pin="G"/>
-<wire x1="132.08" y1="-22.86" x2="127" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="-27.94" x2="142.24" y2="-27.94" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="119.38" y1="-22.86" x2="127" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="-27.94" x2="142.24" y2="-27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
