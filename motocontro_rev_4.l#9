@@ -448,7 +448,7 @@
 <wire x1="54.4" y1="19.04" x2="54.4" y2="-3.8" width="0.1524" layer="21"/>
 <wire x1="54.4" y1="-3.8" x2="-3.6" y2="-3.8" width="0.1524" layer="21"/>
 <wire x1="54.33" y1="1.73" x2="54.34" y2="3.79" width="0.1524" layer="21" curve="-183.892299"/>
-<dimension x1="-3.6" y1="19.04" x2="54.4" y2="19.04" x3="25.4" y3="22" textsize="1.778" layer="21"/>
+<dimension x1="-3.6" y1="19.04" x2="54.4" y2="19.04" x3="25.4" y3="23" textsize="1.778" layer="21"/>
 <dimension x1="-3.6" y1="-3.8" x2="-3.6" y2="19.04" x3="-7" y3="7.62" textsize="1.778" layer="21"/>
 <pad name="VI-" x="0" y="0" drill="1.2" shape="long"/>
 <pad name="ON/OFF" x="0" y="7.62" drill="1.2" shape="long"/>
@@ -458,6 +458,7 @@
 <pad name="SENSE+" x="50.8" y="11.43" drill="1.2" shape="long"/>
 <pad name="VO-" x="50.8" y="0" drill="1.65" shape="long"/>
 <pad name="VO+" x="50.8" y="15.24" drill="1.65" shape="long"/>
+<text x="7" y="16" size="1.778" layer="21">GE STINGRAY H</text>
 </package>
 </packages>
 <packages3d>

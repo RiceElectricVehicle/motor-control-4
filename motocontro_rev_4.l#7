@@ -693,6 +693,28 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="GE_STINGRAY_H">
+<gates>
+<gate name="G$1" symbol="GE_STINGRAY_SYM" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="GE_STINGRAY">
+<connects>
+<connect gate="G$1" pin="ON/OFF" pad="ON/OFF"/>
+<connect gate="G$1" pin="SENSE+" pad="SENSE+"/>
+<connect gate="G$1" pin="SENSE-" pad="SENSE-"/>
+<connect gate="G$1" pin="TRIM" pad="TRIM"/>
+<connect gate="G$1" pin="VI+" pad="VI+"/>
+<connect gate="G$1" pin="VI-" pad="VI-"/>
+<connect gate="G$1" pin="VO+" pad="VO+"/>
+<connect gate="G$1" pin="VO-" pad="VO-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>

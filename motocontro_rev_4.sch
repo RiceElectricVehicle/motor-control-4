@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.2">
+<eagle version="9.1.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -245,6 +245,14 @@
 <pad name="VO+" x="50.8" y="15.24" drill="1.65" shape="long"/>
 <text x="7" y="16" size="1.778" layer="21">GE STINGRAY H</text>
 </package>
+<package name="2818_WITH_VIA" urn="urn:adsk.eagle:footprint:2273579/1">
+<smd name="P$1" x="1.815" y="2.665" dx="3.63" dy="5.33" layer="1"/>
+<smd name="P$2" x="6.005" y="2.665" dx="3.63" dy="5.33" layer="1"/>
+<pad name="P1.1" x="0.66" y="2.665" drill="0.5"/>
+<pad name="P2.2" x="7.21" y="2.665" drill="0.5"/>
+<text x="0.135" y="5.695" size="0.8128" layer="125">&gt;NAME</text>
+<text x="0.17" y="-1.24" size="0.8128" layer="125">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="SOIC127P1032X265-16" urn="urn:adsk.eagle:package:5422465/1" type="model">
@@ -257,6 +265,11 @@
 <package3d name="TO-263/D2PAK" urn="urn:adsk.eagle:package:38457/1" locally_modified="yes" type="box">
 <packageinstances>
 <packageinstance name="TO-263/D2PAK"/>
+</packageinstances>
+</package3d>
+<package3d name="2818_WITH_VIA" urn="urn:adsk.eagle:package:2273943/1" type="box">
+<packageinstances>
+<packageinstance name="2818_WITH_VIA"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -340,6 +353,21 @@
 <text x="-2.286" y="-3.429" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 <pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="R-US-2">
+<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.2032" layer="94"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<text x="-3.81" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -431,6 +459,25 @@
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:38457/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RESSENSE_2818">
+<gates>
+<gate name="G$1" symbol="R-US-2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="2818_WITH_VIA">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1 P1.1"/>
+<connect gate="G$1" pin="2" pad="P$2 P2.2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2273943/1"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -12217,12 +12264,11 @@ type 0309, grid 2.5 mm</description>
 <part name="U$1" library="motocontro_rev_4" deviceset="L6390_DRIVER" device="" package3d_urn="urn:adsk.eagle:package:5422465/1"/>
 <part name="HS_FET" library="motocontro_rev_4" deviceset="FDB86360_NFET" device="TO263/D2PAK" package3d_urn="urn:adsk.eagle:package:38457/1"/>
 <part name="LS_FET" library="motocontro_rev_4" deviceset="FDB86360_NFET" device="TO263/D2PAK" package3d_urn="urn:adsk.eagle:package:38457/1"/>
-<part name="CURR_RES" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R6332" package3d_urn="urn:adsk.eagle:package:13307/1" value="40 mOhm "/>
 <part name="BATTERY" library="motor controller rev 3.0.6" library_urn="urn:adsk.eagle:library:1622728" deviceset="BATTERY" device="" package3d_urn="urn:adsk.eagle:package:1622996/1" value="48V "/>
 <part name="MOTOR" library="motor controller rev 3.0.6" library_urn="urn:adsk.eagle:library:1622728" deviceset="MOTOR" device="" package3d_urn="urn:adsk.eagle:package:1622996/1"/>
 <part name="CBOOT" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="C" device="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="1 uF "/>
 <part name="U$2" library="Teensy356" deviceset="TEENSY_3.5/3.6" device=""/>
-<part name="CURR_RES1" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R6332" package3d_urn="urn:adsk.eagle:package:13307/1" value="40 mOhm "/>
+<part name="CURR_RES1" library="motocontro_rev_4" deviceset="RESSENSE_2818" device="" package3d_urn="urn:adsk.eagle:package:2273943/1" value="37m"/>
 <part name="RDT" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="75.5k"/>
 <part name="CDT" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="C" device="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="100nF"/>
 <part name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="7k"/>
@@ -12233,25 +12279,26 @@ type 0309, grid 2.5 mm</description>
 <part name="R3" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R2012" package3d_urn="urn:adsk.eagle:package:13306/1"/>
 <part name="R4" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R2012" package3d_urn="urn:adsk.eagle:package:13306/1"/>
 <part name="U$3" library="motocontro_rev_4" deviceset="GE_STINGRAY_H" device=""/>
-<part name="U$4" library="r-78xx_10" deviceset="TRACO-TSR-1-2450" device=""/>
+<part name="LDO" library="r-78xx_10" deviceset="TRACO-TSR-1-2450" device=""/>
 <part name="C3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="CPOL-US" device="175TMP-0810" value="22u"/>
 <part name="C1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="CPOL-US" device="175TMP-0810" value="22u"/>
 <part name="C2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="225-113X268" value="100 u"/>
 <part name="R5" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805"/>
 <part name="R6" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805"/>
 <part name="R7" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805"/>
-<part name="U$5" library="motocontro_rev_4" deviceset="FERD40H100SG-TR" device="" package3d_urn="urn:adsk.eagle:package:38457/1"/>
+<part name="SCHOTTKY" library="motocontro_rev_4" deviceset="FERD40H100SG-TR" device="" package3d_urn="urn:adsk.eagle:package:38457/1"/>
+<part name="RSENSE1" library="motocontro_rev_4" deviceset="RESSENSE_2818" device="" package3d_urn="urn:adsk.eagle:package:2273943/1" value="37m"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="27.94" y="68.58" size="1.778" layer="94">PGND is used for the power ground. 
-DGND is used for the digital logic</text>
+<text x="-213.36" y="-38.1" size="1.778" layer="94">PGND is used for the power ground. 
+DGND is used for the digital logic
+They will connect through GND trace </text>
 <text x="121.92" y="2.54" size="1.778" layer="94">R3, R4 for potential current limit to the gates.
 This increases transient times 
 which reduces inductive spikes
 Need to find appropriate package</text>
-<text x="213.36" y="-60.96" size="1.778" layer="94">Get Rsense package from previous REV</text>
 <text x="266.7" y="30.48" size="1.778" layer="94">Must make a Schottky diode part 
 Check BOM </text>
 <text x="-195.58" y="35.56" size="1.778" layer="94">Made this part for the Stingray 
@@ -12281,6 +12328,7 @@ a breakout board that docks for this BUCK</text>
 <text x="-45.72" y="-15.24" size="2.1844" layer="94">OpAmp Support</text>
 <text x="20.32" y="-66.04" size="2.1844" layer="94">DeadTime</text>
 <text x="-45.72" y="-66.04" size="2.1844" layer="94">Fault Disable Time</text>
+<text x="-17.78" y="-27.94" size="1.778" layer="94">I think this should be connected to DGND? </text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="7.62" y="17.78"/>
@@ -12290,7 +12338,6 @@ a breakout board that docks for this BUCK</text>
 <instance part="LS_FET" gate="G$1" x="177.8" y="-17.78" smashed="yes">
 <attribute name="NAME" x="198.12" y="-12.7" size="1.778" layer="94"/>
 </instance>
-<instance part="CURR_RES" gate="G$1" x="182.88" y="-60.96" rot="R90"/>
 <instance part="BATTERY" gate="G$1" x="114.3" y="-5.08"/>
 <instance part="MOTOR" gate="G$1" x="238.76" y="20.32"/>
 <instance part="CBOOT" gate="G$1" x="43.18" y="33.02"/>
@@ -12306,14 +12353,15 @@ a breakout board that docks for this BUCK</text>
 <instance part="R3" gate="G$1" x="160.02" y="20.32" rot="R180"/>
 <instance part="R4" gate="G$1" x="160.02" y="-17.78" rot="R180"/>
 <instance part="U$3" gate="G$1" x="-180.34" y="15.24"/>
-<instance part="U$4" gate="TSR-1-2450$1" x="-180.34" y="-10.16"/>
+<instance part="LDO" gate="TSR-1-2450$1" x="-180.34" y="-10.16"/>
 <instance part="C3" gate="G$1" x="-193.04" y="-15.24"/>
 <instance part="C1" gate="G$1" x="-40.64" y="10.16"/>
 <instance part="C2" gate="G$1" x="-215.9" y="10.16"/>
 <instance part="R5" gate="G$1" x="43.18" y="-33.02"/>
 <instance part="R6" gate="G$1" x="35.56" y="-25.4" rot="R90"/>
 <instance part="R7" gate="G$1" x="35.56" y="-40.64" rot="R90"/>
-<instance part="U$5" gate="G$1" x="218.44" y="17.78" rot="R90"/>
+<instance part="SCHOTTKY" gate="G$1" x="218.44" y="17.78" rot="R90"/>
+<instance part="RSENSE1" gate="G$1" x="182.88" y="-60.96" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -12329,7 +12377,7 @@ a breakout board that docks for this BUCK</text>
 <wire x1="238.76" y1="0" x2="218.44" y2="0" width="0.1524" layer="91"/>
 <junction x="193.04" y="0"/>
 <label x="193.04" y="0" size="1.778" layer="95"/>
-<pinref part="U$5" gate="G$1" pin="A"/>
+<pinref part="SCHOTTKY" gate="G$1" pin="A"/>
 <wire x1="218.44" y1="0" x2="193.04" y2="0" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="15.24" x2="218.44" y2="0" width="0.1524" layer="91"/>
 <junction x="218.44" y="0"/>
@@ -12355,7 +12403,7 @@ a breakout board that docks for this BUCK</text>
 <wire x1="238.76" y1="40.64" x2="238.76" y2="33.02" width="0.1524" layer="91"/>
 <junction x="193.04" y="40.64"/>
 <label x="114.3" y="-2.54" size="1.778" layer="95"/>
-<pinref part="U$5" gate="G$1" pin="C"/>
+<pinref part="SCHOTTKY" gate="G$1" pin="C"/>
 <wire x1="218.44" y1="20.32" x2="218.44" y2="40.64" width="0.1524" layer="91"/>
 <junction x="218.44" y="40.64"/>
 </segment>
@@ -12408,10 +12456,10 @@ a breakout board that docks for this BUCK</text>
 <wire x1="193.04" y1="-30.48" x2="193.04" y2="-55.88" width="0.1524" layer="91"/>
 <pinref part="CURR_RES1" gate="G$1" pin="2"/>
 <wire x1="193.04" y1="-55.88" x2="203.2" y2="-55.88" width="0.1524" layer="91"/>
-<pinref part="CURR_RES" gate="G$1" pin="2"/>
 <wire x1="182.88" y1="-55.88" x2="193.04" y2="-55.88" width="0.1524" layer="91"/>
 <junction x="193.04" y="-55.88"/>
 <label x="193.04" y="-45.72" size="1.778" layer="95" xref="yes"/>
+<pinref part="RSENSE1" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="10_CP+"/>
@@ -12428,7 +12476,6 @@ a breakout board that docks for this BUCK</text>
 <net name="PGND" class="0">
 <segment>
 <pinref part="CURR_RES1" gate="G$1" pin="1"/>
-<pinref part="CURR_RES" gate="G$1" pin="1"/>
 <wire x1="203.2" y1="-66.04" x2="193.04" y2="-66.04" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="-66.04" x2="182.88" y2="-66.04" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="-66.04" x2="193.04" y2="-76.2" width="0.1524" layer="91"/>
@@ -12436,29 +12483,18 @@ a breakout board that docks for this BUCK</text>
 <pinref part="BATTERY" gate="G$1" pin="-"/>
 <wire x1="114.3" y1="-17.78" x2="114.3" y2="-66.04" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="-66.04" x2="114.3" y2="-66.04" width="0.1524" layer="91"/>
-<junction x="182.88" y="-66.04"/>
 <label x="193.04" y="-76.2" size="1.778" layer="95"/>
+<pinref part="RSENSE1" gate="G$1" pin="1"/>
+<junction x="182.88" y="-66.04"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="-7.62" y1="-33.02" x2="-2.54" y2="-33.02" width="0.1524" layer="91"/>
 <label x="-2.54" y="-33.02" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="#SD/OD" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="2_SD/OD"/>
-<wire x1="-10.16" y1="30.48" x2="-25.4" y2="30.48" width="0.1524" layer="91"/>
-<label x="-25.4" y="30.48" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="RSD" gate="G$1" pin="1"/>
-<pinref part="CSD" gate="G$1" pin="2"/>
-<wire x1="-30.48" y1="-78.74" x2="-27.94" y2="-78.74" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="-78.74" x2="-25.4" y2="-78.74" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="-78.74" x2="-27.94" y2="-73.66" width="0.1524" layer="91"/>
-<junction x="-27.94" y="-78.74"/>
-<label x="-27.94" y="-73.66" size="1.778" layer="95"/>
+<wire x1="-193.04" y1="-40.64" x2="-193.04" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-193.04" y="-53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM" class="0">
@@ -12474,6 +12510,11 @@ a breakout board that docks for this BUCK</text>
 <wire x1="-30.48" y1="35.56" x2="-25.4" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="30.48" x2="-38.1" y2="30.48" width="0.1524" layer="91"/>
 <junction x="-30.48" y="30.48"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="6"/>
+<wire x1="-114.3" y1="5.08" x2="-121.92" y2="5.08" width="0.1524" layer="91"/>
+<label x="-121.92" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="OP-" class="0">
@@ -12561,7 +12602,7 @@ a breakout board that docks for this BUCK</text>
 <label x="-154.94" y="2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="TSR-1-2450$1" pin="GND"/>
+<pinref part="LDO" gate="TSR-1-2450$1" pin="GND"/>
 <wire x1="-180.34" y1="-17.78" x2="-180.34" y2="-20.32" width="0.1524" layer="91"/>
 <label x="-180.34" y="-25.4" size="1.778" layer="95"/>
 <pinref part="C3" gate="G$1" pin="-"/>
@@ -12578,6 +12619,10 @@ a breakout board that docks for this BUCK</text>
 <pinref part="R7" gate="G$1" pin="1"/>
 <wire x1="35.56" y1="-45.72" x2="35.56" y2="-48.26" width="0.1524" layer="91"/>
 <label x="35.56" y="-48.26" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="-203.2" y1="-40.64" x2="-203.2" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-203.2" y="-53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="OPOUT" class="0">
@@ -12598,6 +12643,11 @@ a breakout board that docks for this BUCK</text>
 <wire x1="-10.16" y1="5.08" x2="-17.78" y2="5.08" width="0.1524" layer="91"/>
 <label x="-25.4" y="5.08" size="1.778" layer="95"/>
 <wire x1="-17.78" y1="5.08" x2="-25.4" y2="5.08" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="14/A0"/>
+<wire x1="-73.66" y1="-7.62" x2="-63.5" y2="-7.62" width="0.1524" layer="91"/>
+<label x="-66.04" y="-7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -12620,7 +12670,7 @@ a breakout board that docks for this BUCK</text>
 <label x="-152.4" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="TSR-1-2450$1" pin="IN"/>
+<pinref part="LDO" gate="TSR-1-2450$1" pin="IN"/>
 <wire x1="-187.96" y1="-10.16" x2="-193.04" y2="-10.16" width="0.1524" layer="91"/>
 <label x="-198.12" y="-10.16" size="1.778" layer="95"/>
 <pinref part="C3" gate="G$1" pin="+"/>
@@ -12653,16 +12703,25 @@ a breakout board that docks for this BUCK</text>
 <net name="GND" class="0">
 <segment>
 <pinref part="U$3" gate="G$1" pin="VI-"/>
-<wire x1="-198.12" y1="2.54" x2="-210.82" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-198.12" y1="2.54" x2="-205.74" y2="2.54" width="0.1524" layer="91"/>
 <label x="-215.9" y="2.54" size="1.778" layer="95"/>
+<wire x1="-205.74" y1="2.54" x2="-210.82" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="-215.9" y1="2.54" x2="-210.82" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
 <wire x1="-215.9" y1="5.08" x2="-215.9" y2="2.54" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="ON/OFF"/>
+<wire x1="-198.12" y1="10.16" x2="-205.74" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="-205.74" y1="10.16" x2="-205.74" y2="2.54" width="0.1524" layer="91"/>
+<junction x="-205.74" y="2.54"/>
+</segment>
+<segment>
+<wire x1="-185.42" y1="-40.64" x2="-185.42" y2="-50.8" width="0.1524" layer="91"/>
+<label x="-182.88" y="-50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="5V" class="0">
 <segment>
-<pinref part="U$4" gate="TSR-1-2450$1" pin="OUT"/>
+<pinref part="LDO" gate="TSR-1-2450$1" pin="OUT"/>
 <wire x1="-172.72" y1="-10.16" x2="-165.1" y2="-10.16" width="0.1524" layer="91"/>
 <label x="-167.64" y="-10.16" size="1.778" layer="95"/>
 </segment>
@@ -12690,6 +12749,27 @@ a breakout board that docks for this BUCK</text>
 <wire x1="25.4" y1="0" x2="35.56" y2="0" width="0.1524" layer="91"/>
 <label x="30.48" y="0" size="1.778" layer="95"/>
 <wire x1="35.56" y1="0" x2="38.1" y2="0" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="SD/OD" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="5"/>
+<wire x1="-114.3" y1="7.62" x2="-124.46" y2="7.62" width="0.1524" layer="91"/>
+<label x="-124.46" y="7.62" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="2_SD/OD"/>
+<wire x1="-10.16" y1="30.48" x2="-25.4" y2="30.48" width="0.1524" layer="91"/>
+<label x="-25.4" y="30.48" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="RSD" gate="G$1" pin="1"/>
+<pinref part="CSD" gate="G$1" pin="2"/>
+<wire x1="-30.48" y1="-78.74" x2="-27.94" y2="-78.74" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="-78.74" x2="-25.4" y2="-78.74" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="-78.74" x2="-27.94" y2="-73.66" width="0.1524" layer="91"/>
+<junction x="-27.94" y="-78.74"/>
+<label x="-27.94" y="-73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

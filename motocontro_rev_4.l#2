@@ -2866,6 +2866,10 @@ type 0309, grid 2.5 mm</description>
 </gates>
 <devices>
 <device name="" package="TO-263/D2PAK">
+<connects>
+<connect gate="G$1" pin="A" pad="3"/>
+<connect gate="G$1" pin="C" pad="2"/>
+</connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:38457/1"/>
 </package3dinstances>
