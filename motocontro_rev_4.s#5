@@ -2363,10 +2363,9 @@ by exp-lbrs-replace2.ulp</description>
 <sheets>
 <sheet>
 <plain>
-<text x="-33.02" y="33.02" size="1.778" layer="91">Need: PWM pins #SD pin.</text>
-<text x="-48.26" y="43.18" size="1.778" layer="94">PGND is used for the power ground. 
-DGND is used for the digital logic</text>
-<text x="76.2" y="-2.54" size="1.778" layer="94">R3, R4 for potential current limit to the gates.
+<text x="-43.18" y="38.1" size="1.778" layer="91">Need: PWM pins, OPAMP pin, OPAMP filter, #SD pin.</text>
+<text x="-48.26" y="43.18" size="1.778" layer="94">PGND is used for the power ground. DGND is used for the digital logic</text>
+<text x="99.06" y="-7.62" size="1.778" layer="94">R3, R4 for potential current limit to the gates.
 This increases transient times 
 which reduces inductive spikes
 Need to find appropriate package</text>
@@ -2374,12 +2373,8 @@ Need to find appropriate package</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="0" y="0"/>
-<instance part="HS_FET" gate="G$1" x="132.08" y="15.24" smashed="yes">
-<attribute name="NAME" x="152.4" y="20.32" size="1.778" layer="94"/>
-</instance>
-<instance part="LS_FET" gate="G$1" x="132.08" y="-22.86" smashed="yes">
-<attribute name="NAME" x="152.4" y="-17.78" size="1.778" layer="94"/>
-</instance>
+<instance part="HS_FET" gate="G$1" x="132.08" y="15.24"/>
+<instance part="LS_FET" gate="G$1" x="132.08" y="-22.86"/>
 <instance part="CURR_RES" gate="G$1" x="137.16" y="-66.04" rot="R90"/>
 <instance part="BATTERY" gate="G$1" x="68.58" y="-10.16"/>
 <instance part="MOTOR" gate="G$1" x="203.2" y="15.24"/>
@@ -2506,6 +2501,13 @@ Need to find appropriate package</text>
 <label x="2.54" y="-45.72" size="1.778" layer="95"/>
 </segment>
 </net>
+<net name="#LIN" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="1_LIN"/>
+<wire x1="-17.78" y1="17.78" x2="-33.02" y2="17.78" width="0.1524" layer="91"/>
+<label x="-33.02" y="17.78" size="1.778" layer="95"/>
+</segment>
+</net>
 <net name="#SD/OD" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="2_SD/OD"/>
@@ -2522,17 +2524,11 @@ Need to find appropriate package</text>
 <label x="-20.32" y="-63.5" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="PWM" class="0">
+<net name="HIN" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="3_HIN"/>
 <wire x1="-17.78" y1="7.62" x2="-33.02" y2="7.62" width="0.1524" layer="91"/>
-<label x="-45.72" y="12.7" size="1.778" layer="95"/>
-<wire x1="-33.02" y1="7.62" x2="-38.1" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="7.62" x2="-38.1" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="1_LIN"/>
-<wire x1="-17.78" y1="17.78" x2="-33.02" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="12.7" x2="-38.1" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="17.78" x2="-33.02" y2="17.78" width="0.1524" layer="91"/>
+<label x="-33.02" y="7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="OP-" class="0">

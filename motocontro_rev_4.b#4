@@ -879,34 +879,6 @@ design rules under a new name.</description>
 <attribute name="SPICEMODEL" value="NONE" x="-45.72" y="-116.84" size="1.778" layer="27" display="off"/>
 <attribute name="SPICEPREFIX" value="C" x="-45.72" y="-116.84" size="1.778" layer="27" display="off"/>
 </element>
-<element name="R2" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R2012" package3d_urn="urn:adsk.eagle:package:13306/1" value="7k" x="-45.72" y="-123.19">
-<attribute name="SPICEMODEL" value="NONE" x="-45.72" y="-123.19" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="-45.72" y="-123.19" size="1.778" layer="27" display="off"/>
-</element>
-<element name="R1" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R2012" package3d_urn="urn:adsk.eagle:package:13306/1" value="1k" x="-45.72" y="-129.54">
-<attribute name="SPICEMODEL" value="NONE" x="-45.72" y="-129.54" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="-45.72" y="-129.54" size="1.778" layer="27" display="off"/>
-</element>
-<element name="CDT1" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="15u" x="-45.72" y="-135.89">
-<attribute name="SPICEMODEL" value="NONE" x="-45.72" y="-135.89" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="C" x="-45.72" y="-135.89" size="1.778" layer="27" display="off"/>
-</element>
-<element name="RSD" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R2012" package3d_urn="urn:adsk.eagle:package:13306/1" value="" x="-45.72" y="-142.24">
-<attribute name="SPICEMODEL" value="NONE" x="-45.72" y="-142.24" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="-45.72" y="-142.24" size="1.778" layer="27" display="off"/>
-</element>
-<element name="CSD" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="" x="-45.72" y="-148.59">
-<attribute name="SPICEMODEL" value="NONE" x="-45.72" y="-148.59" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="C" x="-45.72" y="-148.59" size="1.778" layer="27" display="off"/>
-</element>
-<element name="R3" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R2012" package3d_urn="urn:adsk.eagle:package:13306/1" value="" x="-45.72" y="-153.67">
-<attribute name="SPICEMODEL" value="NONE" x="-45.72" y="-153.67" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="-45.72" y="-153.67" size="1.778" layer="27" display="off"/>
-</element>
-<element name="R4" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R2012" package3d_urn="urn:adsk.eagle:package:13306/1" value="" x="-45.72" y="-160.02">
-<attribute name="SPICEMODEL" value="NONE" x="-45.72" y="-160.02" size="1.778" layer="27" display="off"/>
-<attribute name="SPICEPREFIX" value="R" x="-45.72" y="-160.02" size="1.778" layer="27" display="off"/>
-</element>
 </elements>
 <signals>
 <signal name="OUT">
@@ -940,14 +912,14 @@ design rules under a new name.</description>
 <wire x1="-30.48" y1="37.145" x2="-36.32" y2="-25.4" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="LVG">
+<contactref element="LS_FET" pad="1"/>
 <contactref element="U$1" pad="11"/>
-<contactref element="R4" pad="2"/>
-<wire x1="35.1336" y1="47.625" x2="-44.87" y2="-160.02" width="0" layer="19" extent="1-1"/>
+<wire x1="-26.67" y1="46.295" x2="35.1336" y2="47.625" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="HVG">
+<contactref element="HS_FET" pad="1"/>
 <contactref element="U$1" pad="15"/>
-<contactref element="R3" pad="2"/>
-<wire x1="35.1336" y1="52.705" x2="-44.87" y2="-153.67" width="0" layer="19" extent="1-1"/>
+<wire x1="-33.02" y1="25.975" x2="35.1336" y2="52.705" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="V_BOOT">
 <contactref element="U$1" pad="16"/>
@@ -959,11 +931,9 @@ design rules under a new name.</description>
 <contactref element="CURR_RES1" pad="2"/>
 <contactref element="CURR_RES" pad="2"/>
 <contactref element="U$1" pad="10"/>
-<contactref element="U$1" pad="9"/>
-<wire x1="-21.59" y1="46.295" x2="-41.35" y2="-104.14" width="0" layer="19" extent="1-1"/>
-<wire x1="-40.08" y1="48.26" x2="-21.59" y2="46.295" width="0" layer="19" extent="1-1"/>
+<wire x1="-40.08" y1="48.26" x2="-41.35" y2="-104.14" width="0" layer="19" extent="1-1"/>
+<wire x1="-21.59" y1="46.295" x2="-40.08" y2="48.26" width="0" layer="19" extent="1-1"/>
 <wire x1="35.1336" y1="46.355" x2="-21.59" y2="46.295" width="0" layer="19" extent="1-1"/>
-<wire x1="35.1336" y1="45.085" x2="35.1336" y2="46.355" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PGND">
 <contactref element="CURR_RES1" pad="1"/>
@@ -971,41 +941,35 @@ design rules under a new name.</description>
 <contactref element="BATTERY" pad="NEG2"/>
 <contactref element="BATTERY" pad="NEG3"/>
 <contactref element="BATTERY" pad="NEG1"/>
-<contactref element="R1" pad="1"/>
-<wire x1="-47.55" y1="-104.14" x2="-46.57" y2="-129.54" width="0" layer="19" extent="1-1"/>
 <wire x1="-41.4" y1="-12.7" x2="-47.55" y2="-104.14" width="0" layer="19" extent="1-1"/>
 <wire x1="-46.48" y1="-5.84" x2="-41.4" y2="-12.7" width="0" layer="19" extent="1-1"/>
 <wire x1="-36.32" y1="-5.84" x2="-41.4" y2="-12.7" width="0" layer="19" extent="1-1"/>
 <wire x1="-46.28" y1="48.26" x2="-46.48" y2="-5.84" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$2">
+<contactref element="U$1" pad="9"/>
 </signal>
 <signal name="#LIN">
 <contactref element="U$1" pad="1"/>
 </signal>
 <signal name="#SD/OD">
 <contactref element="U$1" pad="2"/>
-<contactref element="RSD" pad="1"/>
-<contactref element="CSD" pad="2"/>
-<wire x1="-46.57" y1="-142.24" x2="-44.32" y2="-148.59" width="0" layer="19" extent="1-1"/>
-<wire x1="25.8264" y1="52.705" x2="-46.57" y2="-142.24" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="HIN">
 <contactref element="U$1" pad="3"/>
 </signal>
 <signal name="OP-">
 <contactref element="U$1" pad="6"/>
-<contactref element="R2" pad="1"/>
-<contactref element="CDT1" pad="1"/>
-<contactref element="R1" pad="2"/>
-<wire x1="-44.87" y1="-129.54" x2="-47.12" y2="-135.89" width="0" layer="19" extent="1-1"/>
-<wire x1="-46.57" y1="-123.19" x2="-44.87" y2="-129.54" width="0" layer="19" extent="1-1"/>
-<wire x1="25.8264" y1="47.625" x2="-46.57" y2="-123.19" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DT">
+<contactref element="U$1" pad="5"/>
 <contactref element="CDT" pad="1"/>
 <contactref element="RDT" pad="2"/>
-<contactref element="U$1" pad="5"/>
 <wire x1="-44.87" y1="-111.76" x2="-47.12" y2="-116.84" width="0" layer="19" extent="1-1"/>
 <wire x1="25.8264" y1="48.895" x2="-44.87" y2="-111.76" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="V_CC">
+<contactref element="U$1" pad="4"/>
 </signal>
 <signal name="DGND">
 <contactref element="CDT" pad="2"/>
@@ -1013,39 +977,13 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="8"/>
 <contactref element="U$2" pad="GND"/>
 <contactref element="U$2" pad="AGND"/>
-<contactref element="U$2" pad="GND2"/>
-<contactref element="CSD" pad="1"/>
-<wire x1="-44.32" y1="-116.84" x2="-47.12" y2="-148.59" width="0" layer="19" extent="1-1"/>
 <wire x1="-46.57" y1="-111.76" x2="-44.32" y2="-116.84" width="0" layer="19" extent="1-1"/>
 <wire x1="-45.72" y1="-97.79" x2="-46.57" y2="-111.76" width="0" layer="19" extent="1-1"/>
 <wire x1="-43.18" y1="-82.55" x2="-45.72" y2="-97.79" width="0" layer="19" extent="1-1"/>
-<wire x1="-10.16" y1="-82.55" x2="-43.18" y2="-82.55" width="0" layer="19" extent="1-1"/>
-<wire x1="25.8264" y1="45.085" x2="-10.16" y2="-82.55" width="0" layer="19" extent="1-1"/>
+<wire x1="25.8264" y1="45.085" x2="-43.18" y2="-82.55" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="U$2" pad="GND3"/>
-</signal>
-<signal name="OPOUT">
-<contactref element="R2" pad="2"/>
-<contactref element="CDT1" pad="2"/>
-<contactref element="U$1" pad="7"/>
-<wire x1="-44.87" y1="-123.19" x2="-44.32" y2="-135.89" width="0" layer="19" extent="1-1"/>
-<wire x1="25.8264" y1="46.355" x2="-44.87" y2="-123.19" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="VCC">
-<contactref element="RSD" pad="2"/>
-<contactref element="U$1" pad="4"/>
-<wire x1="25.8264" y1="50.165" x2="-44.87" y2="-142.24" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$2">
-<contactref element="HS_FET" pad="1"/>
-<contactref element="R3" pad="1"/>
-<wire x1="-33.02" y1="25.975" x2="-46.57" y2="-153.67" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$3">
-<contactref element="LS_FET" pad="1"/>
-<contactref element="R4" pad="1"/>
-<wire x1="-26.67" y1="46.295" x2="-46.57" y2="-160.02" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

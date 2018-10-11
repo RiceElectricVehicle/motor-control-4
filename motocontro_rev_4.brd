@@ -309,6 +309,24 @@ Source: http://download.siliconexpert.com/pdfs/2005/02/24/Semi_Ap/2/VSH/Resistor
 <text x="0" y="7.135" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-7.135" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
 </package>
+<package name="GE_STINGRAY">
+<wire x1="-3.6" y1="-3.8" x2="-3.6" y2="19.04" width="0.1524" layer="21"/>
+<wire x1="-3.6" y1="19.04" x2="54.4" y2="19.04" width="0.1524" layer="21"/>
+<wire x1="54.4" y1="19.04" x2="54.4" y2="-3.8" width="0.1524" layer="21"/>
+<wire x1="54.4" y1="-3.8" x2="-3.6" y2="-3.8" width="0.1524" layer="21"/>
+<wire x1="54.33" y1="1.73" x2="54.34" y2="3.79" width="0.1524" layer="21" curve="-183.892299"/>
+<dimension x1="-3.6" y1="19.04" x2="54.4" y2="19.04" x3="25.4" y3="23" textsize="1.778" layer="21"/>
+<dimension x1="-3.6" y1="-3.8" x2="-3.6" y2="19.04" x3="-7" y3="7.62" textsize="1.778" layer="21"/>
+<pad name="VI-" x="0" y="0" drill="1.2" shape="long"/>
+<pad name="ON/OFF" x="0" y="7.62" drill="1.2" shape="long"/>
+<pad name="VI+" x="0" y="15.24" drill="1.2" shape="long"/>
+<pad name="SENSE-" x="50.8" y="3.81" drill="1.2" shape="long"/>
+<pad name="TRIM" x="50.8" y="7.62" drill="1.2" shape="long"/>
+<pad name="SENSE+" x="50.8" y="11.43" drill="1.2" shape="long"/>
+<pad name="VO-" x="50.8" y="0" drill="1.65" shape="long"/>
+<pad name="VO+" x="50.8" y="15.24" drill="1.65" shape="long"/>
+<text x="7" y="16" size="1.778" layer="21">GE STINGRAY H</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="TO-263/D2PAK" urn="urn:adsk.eagle:package:38457/1" locally_modified="yes" type="box">
@@ -907,6 +925,7 @@ design rules under a new name.</description>
 <attribute name="SPICEMODEL" value="NONE" x="-45.72" y="-160.02" size="1.778" layer="27" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="-45.72" y="-160.02" size="1.778" layer="27" display="off"/>
 </element>
+<element name="U$3" library="motocontro_rev_4" package="GE_STINGRAY" value="GE_STINGRAY_H" x="-38.1" y="-187.96"/>
 </elements>
 <signals>
 <signal name="OUT">
@@ -978,9 +997,6 @@ design rules under a new name.</description>
 <wire x1="-36.32" y1="-5.84" x2="-41.4" y2="-12.7" width="0" layer="19" extent="1-1"/>
 <wire x1="-46.28" y1="48.26" x2="-46.48" y2="-5.84" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="#LIN">
-<contactref element="U$1" pad="1"/>
-</signal>
 <signal name="#SD/OD">
 <contactref element="U$1" pad="2"/>
 <contactref element="RSD" pad="1"/>
@@ -988,8 +1004,10 @@ design rules under a new name.</description>
 <wire x1="-46.57" y1="-142.24" x2="-44.32" y2="-148.59" width="0" layer="19" extent="1-1"/>
 <wire x1="25.8264" y1="52.705" x2="-46.57" y2="-142.24" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="HIN">
+<signal name="PWM">
 <contactref element="U$1" pad="3"/>
+<contactref element="U$1" pad="1"/>
+<wire x1="25.8264" y1="51.435" x2="25.8264" y2="53.975" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="OP-">
 <contactref element="U$1" pad="6"/>
