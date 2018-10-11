@@ -12279,7 +12279,7 @@ type 0309, grid 2.5 mm</description>
 <part name="R3" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R2012" package3d_urn="urn:adsk.eagle:package:13306/1"/>
 <part name="R4" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" deviceset="R" device="R2012" package3d_urn="urn:adsk.eagle:package:13306/1"/>
 <part name="U$3" library="motocontro_rev_4" deviceset="GE_STINGRAY_H" device=""/>
-<part name="U$4" library="r-78xx_10" deviceset="TRACO-TSR-1-2450" device=""/>
+<part name="LDO" library="r-78xx_10" deviceset="TRACO-TSR-1-2450" device=""/>
 <part name="C3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="CPOL-US" device="175TMP-0810" value="22u"/>
 <part name="C1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="CPOL-US" device="175TMP-0810" value="22u"/>
 <part name="C2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="C-US" device="225-113X268" value="100 u"/>
@@ -12353,7 +12353,7 @@ a breakout board that docks for this BUCK</text>
 <instance part="R3" gate="G$1" x="160.02" y="20.32" rot="R180"/>
 <instance part="R4" gate="G$1" x="160.02" y="-17.78" rot="R180"/>
 <instance part="U$3" gate="G$1" x="-180.34" y="15.24"/>
-<instance part="U$4" gate="TSR-1-2450$1" x="-180.34" y="-10.16"/>
+<instance part="LDO" gate="TSR-1-2450$1" x="-180.34" y="-10.16"/>
 <instance part="C3" gate="G$1" x="-193.04" y="-15.24"/>
 <instance part="C1" gate="G$1" x="-40.64" y="10.16"/>
 <instance part="C2" gate="G$1" x="-215.9" y="10.16"/>
@@ -12497,17 +12497,6 @@ a breakout board that docks for this BUCK</text>
 <label x="-193.04" y="-53.34" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="#SD/OD" class="0">
-<segment>
-<pinref part="RSD" gate="G$1" pin="1"/>
-<pinref part="CSD" gate="G$1" pin="2"/>
-<wire x1="-30.48" y1="-78.74" x2="-27.94" y2="-78.74" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="-78.74" x2="-25.4" y2="-78.74" width="0.1524" layer="91"/>
-<wire x1="-27.94" y1="-78.74" x2="-27.94" y2="-73.66" width="0.1524" layer="91"/>
-<junction x="-27.94" y="-78.74"/>
-<label x="-27.94" y="-73.66" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="PWM" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="3_HIN"/>
@@ -12613,7 +12602,7 @@ a breakout board that docks for this BUCK</text>
 <label x="-154.94" y="2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="TSR-1-2450$1" pin="GND"/>
+<pinref part="LDO" gate="TSR-1-2450$1" pin="GND"/>
 <wire x1="-180.34" y1="-17.78" x2="-180.34" y2="-20.32" width="0.1524" layer="91"/>
 <label x="-180.34" y="-25.4" size="1.778" layer="95"/>
 <pinref part="C3" gate="G$1" pin="-"/>
@@ -12681,7 +12670,7 @@ a breakout board that docks for this BUCK</text>
 <label x="-152.4" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="TSR-1-2450$1" pin="IN"/>
+<pinref part="LDO" gate="TSR-1-2450$1" pin="IN"/>
 <wire x1="-187.96" y1="-10.16" x2="-193.04" y2="-10.16" width="0.1524" layer="91"/>
 <label x="-198.12" y="-10.16" size="1.778" layer="95"/>
 <pinref part="C3" gate="G$1" pin="+"/>
@@ -12732,7 +12721,7 @@ a breakout board that docks for this BUCK</text>
 </net>
 <net name="5V" class="0">
 <segment>
-<pinref part="U$4" gate="TSR-1-2450$1" pin="OUT"/>
+<pinref part="LDO" gate="TSR-1-2450$1" pin="OUT"/>
 <wire x1="-172.72" y1="-10.16" x2="-165.1" y2="-10.16" width="0.1524" layer="91"/>
 <label x="-167.64" y="-10.16" size="1.778" layer="95"/>
 </segment>
@@ -12772,6 +12761,15 @@ a breakout board that docks for this BUCK</text>
 <pinref part="U$1" gate="G$1" pin="2_SD/OD"/>
 <wire x1="-10.16" y1="30.48" x2="-25.4" y2="30.48" width="0.1524" layer="91"/>
 <label x="-25.4" y="30.48" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="RSD" gate="G$1" pin="1"/>
+<pinref part="CSD" gate="G$1" pin="2"/>
+<wire x1="-30.48" y1="-78.74" x2="-27.94" y2="-78.74" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="-78.74" x2="-25.4" y2="-78.74" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="-78.74" x2="-27.94" y2="-73.66" width="0.1524" layer="91"/>
+<junction x="-27.94" y="-78.74"/>
+<label x="-27.94" y="-73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
