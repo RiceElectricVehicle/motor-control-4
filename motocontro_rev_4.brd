@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.0">
+<eagle version="9.2.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -1005,115 +1005,115 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="HS_FET" library="motocontro_rev_4" package="TO-263/D2PAK" package3d_urn="urn:adsk.eagle:package:38457/1" value="FDB86360_NFETTO263/D2PAK" x="99.06" y="72.88" rot="R270">
+<element name="HS_FET" library="motocontro_rev_4" package="TO-263/D2PAK" package3d_urn="urn:adsk.eagle:package:38457/1" value="FDB86360_NFETTO263/D2PAK" x="99.06" y="72.88" smashed="yes" rot="R270">
 <attribute name="NAME" x="99.06" y="78.595" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="VALUE" x="99.06" y="67.165" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="LS_FET" library="motocontro_rev_4" package="TO-263/D2PAK" package3d_urn="urn:adsk.eagle:package:38457/1" value="FDB86360_NFETTO263/D2PAK" x="98.88" y="46.73" rot="R270">
+<element name="LS_FET" library="motocontro_rev_4" package="TO-263/D2PAK" package3d_urn="urn:adsk.eagle:package:38457/1" value="FDB86360_NFETTO263/D2PAK" x="98.88" y="46.73" smashed="yes" rot="R270">
 <attribute name="NAME" x="98.88" y="52.445" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="VALUE" x="98.88" y="41.015" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="U$1" library="motocontro_rev_4" package="SOIC127P1032X265-16" package3d_urn="urn:adsk.eagle:package:5422465/1" value="L6390_DRIVER" x="71.12" y="56.69">
+<element name="U$1" library="motocontro_rev_4" package="SOIC127P1032X265-16" package3d_urn="urn:adsk.eagle:package:5422465/1" value="L6390_DRIVER" x="71.12" y="56.69" smashed="yes">
 <attribute name="NAME" x="71.12" y="63.825" size="1.27" layer="25" align="bottom-center"/>
 <attribute name="VALUE" x="71.12" y="49.555" size="1.27" layer="27" align="top-center"/>
 </element>
-<element name="BATTERY" library="motor controller rev 3.0.6" library_urn="urn:adsk.eagle:library:1622728" package="SB50POWER_CLAW" package3d_urn="urn:adsk.eagle:package:1622996/1" value="48V " x="102.53" y="-1.92" rot="R270">
+<element name="BATTERY" library="motor controller rev 3.0.6" library_urn="urn:adsk.eagle:library:1622728" package="SB50POWER_CLAW" package3d_urn="urn:adsk.eagle:package:1622996/1" value="48V " x="102.53" y="-1.92" smashed="yes" rot="R270">
 <attribute name="NAME" x="93.64" y="4.43" size="3.81" layer="21"/>
 </element>
-<element name="MOTOR" library="motor controller rev 3.0.6" library_urn="urn:adsk.eagle:library:1622728" package="SB50POWER_CLAW" package3d_urn="urn:adsk.eagle:package:1622996/1" value="MOTOR" x="141.06" y="-1.92" rot="R270">
+<element name="MOTOR" library="motor controller rev 3.0.6" library_urn="urn:adsk.eagle:library:1622728" package="SB50POWER_CLAW" package3d_urn="urn:adsk.eagle:package:1622996/1" value="MOTOR" x="141.06" y="-1.92" smashed="yes" rot="R270">
 <attribute name="NAME" x="132.17" y="4.43" size="3.81" layer="21"/>
 </element>
-<element name="CBOOT" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="1 uF " x="80.12" y="66.24" rot="R270">
+<element name="CBOOT" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="1 uF " x="80.12" y="66.24" smashed="yes" rot="R270">
 <attribute name="NAME" x="81.39" y="67.51" size="1.27" layer="25" rot="R270"/>
 <attribute name="SPICEMODEL" value="NONE" x="80.12" y="66.24" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="SPICEPREFIX" value="C" x="80.12" y="66.24" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="77.58" y="67.51" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="U$2" library="Teensy356" package="TEENSY_3.5/3.6" value="TEENSY_3.5/3.6" x="39.99" y="50.2" rot="R90"/>
-<element name="CURR_RES1" library="motocontro_rev_4" package="2818_WITH_VIA" package3d_urn="urn:adsk.eagle:package:2273943/1" value="37m" x="94.36" y="26.09" rot="R90">
+<element name="U$2" library="Teensy356" package="TEENSY_3.5/3.6" value="TEENSY_3.5/3.6" x="39.99" y="50.2" smashed="yes" rot="R90"/>
+<element name="CURR_RES1" library="motocontro_rev_4" package="2818_WITH_VIA" package3d_urn="urn:adsk.eagle:package:2273943/1" value="37m" x="94.36" y="26.09" smashed="yes" rot="R90">
 <attribute name="NAME" x="88.665" y="26.225" size="0.8128" layer="125" rot="R90"/>
 <attribute name="VALUE" x="95.6" y="26.26" size="0.8128" layer="125" rot="R90"/>
 </element>
-<element name="RDT" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="75.5k" x="55.56" y="53.51" rot="R90">
+<element name="RDT" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="75.5k" x="55.56" y="53.51" smashed="yes" rot="R90">
 <attribute name="NAME" x="54.544" y="52.748" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="57.846" y="52.748" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="CDT" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="100nF" x="51.72" y="53.67" rot="R270">
+<element name="CDT" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="100nF" x="51.72" y="53.67" smashed="yes" rot="R270">
 <attribute name="NAME" x="52.99" y="54.94" size="1.27" layer="25" rot="R270"/>
 <attribute name="SPICEMODEL" value="NONE" x="51.72" y="53.67" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="SPICEPREFIX" value="C" x="51.72" y="53.67" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="49.18" y="54.94" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="7k" x="58.1" y="45.34" rot="R270">
+<element name="R2" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="7k" x="58.1" y="45.34" smashed="yes" rot="R270">
 <attribute name="NAME" x="59.116" y="46.102" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="55.814" y="46.102" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="R1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="1k" x="65.648" y="47.059" rot="R180">
+<element name="R1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="1k" x="65.648" y="47.059" smashed="yes" rot="R180">
 <attribute name="NAME" x="66.41" y="46.043" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="66.41" y="49.345" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="CDT1" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="15u" x="61.64" y="45.51" rot="R270">
+<element name="CDT1" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="15u" x="61.64" y="45.51" smashed="yes" rot="R270">
 <attribute name="NAME" x="62.91" y="46.78" size="1.27" layer="25" rot="R270"/>
 <attribute name="SPICEMODEL" value="NONE" x="61.64" y="45.51" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="SPICEPREFIX" value="C" x="61.64" y="45.51" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="VALUE" x="59.1" y="46.78" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="RSD" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="" x="54.481" y="65.097" rot="R90">
+<element name="RSD" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="" x="54.481" y="65.097" smashed="yes" rot="R90">
 <attribute name="NAME" x="53.465" y="64.335" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="56.767" y="64.335" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="CSD" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="" x="54.49" y="60.34" rot="R90">
+<element name="CSD" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="C1206" package3d_urn="urn:adsk.eagle:package:13279/1" value="" x="54.49" y="60.34" smashed="yes" rot="R90">
 <attribute name="NAME" x="53.22" y="59.07" size="1.27" layer="25" rot="R90"/>
 <attribute name="SPICEMODEL" value="NONE" x="54.49" y="60.34" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="SPICEPREFIX" value="C" x="54.49" y="60.34" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="57.03" y="59.07" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="R3" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R2012" package3d_urn="urn:adsk.eagle:package:13306/1" value="" x="83.49" y="60.42" rot="R180">
+<element name="R3" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R2012" package3d_urn="urn:adsk.eagle:package:13306/1" value="" x="83.49" y="60.42" smashed="yes" rot="R180">
 <attribute name="NAME" x="84.125" y="59.15" size="1.27" layer="25" rot="R180"/>
 <attribute name="SPICEMODEL" value="NONE" x="83.49" y="60.42" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="83.49" y="60.42" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="84.125" y="62.96" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="R4" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R2012" package3d_urn="urn:adsk.eagle:package:13306/1" value="" x="83.49" y="54.77" rot="R180">
+<element name="R4" library="eagle-ltspice" library_urn="urn:adsk.eagle:library:217" package="R2012" package3d_urn="urn:adsk.eagle:package:13306/1" value="" x="83.49" y="54.77" smashed="yes" rot="R180">
 <attribute name="NAME" x="84.125" y="53.5" size="1.27" layer="25" rot="R180"/>
 <attribute name="SPICEMODEL" value="NONE" x="83.49" y="54.77" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SPICEPREFIX" value="R" x="83.49" y="54.77" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="84.125" y="57.31" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="U$3" library="motocontro_rev_4" package="GE_STINGRAY" value="GE_STINGRAY_H" x="24.35" y="21.46" rot="R90"/>
-<element name="LDO" library="r-78xx_10" package="SIP3" value="TRACO-TSR-1-2450" x="68.95" y="27.17" rot="R270">
+<element name="U$3" library="motocontro_rev_4" package="GE_STINGRAY" value="GE_STINGRAY_H" x="24.35" y="21.46" smashed="yes" rot="R90"/>
+<element name="LDO" library="r-78xx_10" package="SIP3" value="TRACO-TSR-1-2450" x="68.95" y="27.17" smashed="yes" rot="R270">
 <attribute name="NAME" x="74.9" y="32.87" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="65.25" y="32.87" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="C3" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="175TMP-0810" value="22u" x="58.62" y="26.94" rot="R90">
+<element name="C3" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="175TMP-0810" value="22u" x="58.62" y="26.94" smashed="yes" rot="R90">
 <attribute name="NAME" x="54.09" y="22.65" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="64.405" y="22.615" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="C1" library="Nordic_nRF" library_urn="urn:adsk.eagle:library:169009" package="RESC0805_M" package3d_urn="urn:adsk.eagle:package:2593737/1" value="1u" x="59.43" y="53.51" rot="R270">
+<element name="C1" library="Nordic_nRF" library_urn="urn:adsk.eagle:library:169009" package="RESC0805_M" package3d_urn="urn:adsk.eagle:package:2593737/1" value="1u" x="59.43" y="53.51" smashed="yes" rot="R270">
 <attribute name="NAME" x="61.43" y="55.51" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="56.43" y="55.51" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="C2" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="C225-113X268" value="100 u" x="16.81" y="8.81">
+<element name="C2" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="C225-113X268" value="100 u" x="16.81" y="8.81" smashed="yes">
 <attribute name="NAME" x="3.856" y="14.779" size="1.778" layer="25" ratio="10"/>
 <attribute name="VALUE" x="11.73" y="6.27" size="1.778" layer="27" ratio="10"/>
 </element>
-<element name="R5" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="" x="82.839" y="44.253">
+<element name="R5" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="" x="82.839" y="44.253" smashed="yes">
 <attribute name="NAME" x="82.077" y="45.269" size="1.27" layer="25"/>
 <attribute name="VALUE" x="82.077" y="41.967" size="1.27" layer="27"/>
 </element>
-<element name="R6" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="" x="78.853" y="46.929" rot="R90">
+<element name="R6" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="" x="78.853" y="46.929" smashed="yes" rot="R90">
 <attribute name="NAME" x="77.837" y="46.167" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="81.139" y="46.167" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="R7" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="" x="78.828" y="41.946" rot="R90">
+<element name="R7" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="R0805" value="" x="78.828" y="41.946" smashed="yes" rot="R90">
 <attribute name="NAME" x="77.812" y="41.184" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="81.114" y="41.184" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="SCHOTTKY" library="motocontro_rev_4" package="TO-263/D2PAK" package3d_urn="urn:adsk.eagle:package:38457/1" value="FERD40H100SG-TR" x="132.43" y="58.09" rot="R270">
+<element name="SCHOTTKY" library="motocontro_rev_4" package="TO-263/D2PAK" package3d_urn="urn:adsk.eagle:package:38457/1" value="FERD40H100SG-TR" x="132.43" y="58.09" smashed="yes" rot="R270">
 <attribute name="NAME" x="132.43" y="63.805" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center"/>
 <attribute name="VALUE" x="132.43" y="52.375" size="0.6096" layer="27" font="vector" ratio="20" align="top-center"/>
 </element>
-<element name="RSENSE1" library="motocontro_rev_4" package="2818_WITH_VIA" package3d_urn="urn:adsk.eagle:package:2273943/1" value="37m" x="87.09" y="26.31" rot="R90">
+<element name="RSENSE1" library="motocontro_rev_4" package="2818_WITH_VIA" package3d_urn="urn:adsk.eagle:package:2273943/1" value="37m" x="87.09" y="26.31" smashed="yes" rot="R90">
 <attribute name="NAME" x="81.395" y="26.445" size="0.8128" layer="125" rot="R90"/>
 <attribute name="VALUE" x="88.33" y="26.48" size="0.8128" layer="125" rot="R90"/>
 </element>
