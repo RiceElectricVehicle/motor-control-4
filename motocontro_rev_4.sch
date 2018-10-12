@@ -259,6 +259,10 @@
 <text x="0.135" y="5.695" size="0.8128" layer="125">&gt;NAME</text>
 <text x="0.17" y="-1.24" size="0.8128" layer="125">&gt;VALUE</text>
 </package>
+<package name="GND_TRACE">
+<smd name="P$1" x="1.27" y="0" dx="1.27" dy="0.635" layer="1"/>
+<smd name="P$2" x="0" y="0" dx="1.27" dy="0.635" layer="1"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="SOIC127P1032X265-16" urn="urn:adsk.eagle:package:5422465/1" type="model">
@@ -361,6 +365,21 @@
 <pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 <symbol name="R-US-2">
+<wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="-0.889" y1="1.016" x2="-0.254" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="-0.254" y1="-1.016" x2="0.381" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="0.381" y1="1.016" x2="1.016" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="1.016" y1="-1.016" x2="1.651" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="1.651" y1="1.016" x2="2.286" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="2.286" y1="-1.016" x2="2.54" y2="0" width="0.2032" layer="94"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<text x="-3.81" y="1.4986" size="1.778" layer="95">&gt;NAME</text>
+<text x="-3.81" y="-3.302" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="R-US">
 <wire x1="-2.54" y1="0" x2="-2.159" y2="1.016" width="0.2032" layer="94"/>
 <wire x1="-2.159" y1="1.016" x2="-1.524" y2="-1.016" width="0.2032" layer="94"/>
 <wire x1="-1.524" y1="-1.016" x2="-0.889" y2="1.016" width="0.2032" layer="94"/>
@@ -485,6 +504,22 @@
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:2273943/1"/>
 </package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GND_JUMPER">
+<gates>
+<gate name="G$1" symbol="R-US" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="GND_TRACE">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -12822,6 +12857,7 @@ IPC Nominal Density</description>
 <part name="R7" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805"/>
 <part name="SCHOTTKY" library="motocontro_rev_4" deviceset="FERD40H100SG-TR" device="" package3d_urn="urn:adsk.eagle:package:38457/1"/>
 <part name="RSENSE1" library="motocontro_rev_4" deviceset="RESSENSE_2818" device="" package3d_urn="urn:adsk.eagle:package:2273943/1" value="37m"/>
+<part name="U$5" library="motocontro_rev_4" deviceset="GND_JUMPER" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12857,7 +12893,7 @@ a breakout board that docks for this BUCK</text>
 <text x="20.32" y="-66.04" size="2.1844" layer="94">DeadTime</text>
 <text x="-45.72" y="-66.04" size="2.1844" layer="94">Fault Disable Time</text>
 <text x="40.64" y="-45.72" size="1.778" layer="94">Should be PGND </text>
-<text x="-203.2" y="30.48" size="1.778" layer="91">Stingray is overkill. Look for 10-1W buck</text>
+<text x="-213.36" y="33.02" size="1.778" layer="91">Stingray is overkill. Look for 10-1W buck</text>
 <text x="-208.28" y="-58.42" size="1.778" layer="94">Connect with a 0Ohm jumper, or jumper.</text>
 <text x="40.64" y="-25.4" size="1.778" layer="94">Make this tunable. 
 Pot, triple parallel or something</text>
@@ -12968,6 +13004,10 @@ Add a U-shape </text>
 <instance part="RSENSE1" gate="G$1" x="165.1" y="-63.5" rot="R90">
 <attribute name="NAME" x="163.6014" y="-67.31" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="168.402" y="-67.31" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="U$5" gate="G$1" x="-198.12" y="-40.64">
+<attribute name="NAME" x="-201.93" y="-39.1414" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-201.93" y="-43.942" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -13102,6 +13142,7 @@ Add a U-shape </text>
 <segment>
 <wire x1="-193.04" y1="-40.64" x2="-193.04" y2="-50.8" width="0.1524" layer="91"/>
 <label x="-193.04" y="-53.34" size="1.778" layer="95"/>
+<pinref part="U$5" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="VI-"/>
@@ -13243,6 +13284,7 @@ Add a U-shape </text>
 <segment>
 <wire x1="-203.2" y1="-40.64" x2="-203.2" y2="-50.8" width="0.1524" layer="91"/>
 <label x="-203.2" y="-53.34" size="1.778" layer="95"/>
+<pinref part="U$5" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="OPOUT" class="0">
