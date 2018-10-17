@@ -3,7 +3,7 @@
 <eagle version="9.2.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="2" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -170,7 +170,6 @@
 <wire x1="163" y1="89" x2="0" y2="89" width="0" layer="20"/>
 <wire x1="0" y1="89" x2="0" y2="0" width="0" layer="20"/>
 <text x="11" y="83" size="2.54" layer="25">REV MC 2018.1</text>
-<dimension x1="160" y1="89" x2="0" y2="89" x3="80" y3="95" textsize="1.778" layer="20"/>
 <dimension x1="160" y1="0" x2="160" y2="89" x3="175.5" y3="44.5" textsize="1.778" layer="20"/>
 <hole x="4.5" y="85" drill="2"/>
 <hole x="4.5" y="85" drill="2"/>
@@ -220,7 +219,9 @@
 <vertex x="152" y="78.5"/>
 <vertex x="151" y="79.5"/>
 </polygon>
-<text x="82" y="84" size="1.778" layer="21">Built with love by M&amp;M</text>
+<text x="82" y="83" size="1.778" layer="21">Custom Built for SEM by M&amp;M
+LETS GO RICE</text>
+<dimension x1="0" y1="89" x2="163" y2="89" x3="81.5" y3="93" textsize="1.778" layer="20" dtype="horizontal"/>
 </plain>
 <libraries>
 <library name="eagle-ltspice" urn="urn:adsk.eagle:library:217">

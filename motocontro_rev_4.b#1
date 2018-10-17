@@ -3,7 +3,7 @@
 <eagle version="9.2.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="2" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -220,6 +220,8 @@
 <vertex x="152" y="78.5"/>
 <vertex x="151" y="79.5"/>
 </polygon>
+<text x="82" y="83" size="1.778" layer="21">Custom Built for SEM by M&amp;M
+LETS GO RICE</text>
 </plain>
 <libraries>
 <library name="eagle-ltspice" urn="urn:adsk.eagle:library:217">
