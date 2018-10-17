@@ -172,11 +172,7 @@
 <text x="11" y="83" size="2.54" layer="25">REV Half-Bridge Motor Controller </text>
 <text x="127" y="85" size="1.778" layer="25">Put holes in for standoffs</text>
 <text x="117" y="78" size="1.778" layer="25">add in a ton of vias</text>
-<text x="67" y="-3.5" size="1.778" layer="25">shorten the path </text>
-<text x="66.5" y="-6.5" size="1.778" layer="25">increase isolation </text>
-<text x="43" y="-9.5" size="1.778" layer="25">take sense wire and connect to via </text>
 <text x="81" y="35" size="1.778" layer="25">make a blue trace to sense from via </text>
-<text x="39.5" y="-12" size="1.778" layer="25">maybe put connectors on right side </text>
 <text x="97" y="85" size="1.778" layer="25">put in official REV logo </text>
 </plain>
 <libraries>
