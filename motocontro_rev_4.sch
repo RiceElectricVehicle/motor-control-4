@@ -14907,8 +14907,8 @@ Wickmann</description>
 <part name="VBUS" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/1"/>
 <part name="TP8" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/1"/>
 <part name="OP+" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="B1,27" package3d_urn="urn:adsk.eagle:package:27944/1"/>
-<part name="SV2" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-1" device="" package3d_urn="urn:adsk.eagle:package:8339/1"/>
-<part name="SV1" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-1" device="" package3d_urn="urn:adsk.eagle:package:8339/1"/>
+<part name="DGND" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-1" device="" package3d_urn="urn:adsk.eagle:package:8339/1"/>
+<part name="PGND" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-1" device="" package3d_urn="urn:adsk.eagle:package:8339/1"/>
 <part name="STATUS" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="CHIP-LED0805"/>
 <part name="R12" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="150"/>
 <part name="U$4" library="JST_headers" deviceset="JST-PH_5-PIN_HEADER" device=""/>
@@ -15128,11 +15128,11 @@ Add a U-shape </text>
 <attribute name="NAME" x="26.416" y="-24.13" size="1.778" layer="95" rot="R270"/>
 <attribute name="TP_SIGNAL_NAME" x="24.13" y="-27.94" size="1.778" layer="97" rot="R180"/>
 </instance>
-<instance part="SV2" gate="G$1" x="-160.02" y="-63.5" smashed="yes" rot="R180">
+<instance part="DGND" gate="G$1" x="-160.02" y="-63.5" smashed="yes" rot="R180">
 <attribute name="VALUE" x="-158.75" y="-55.88" size="1.778" layer="96" rot="R180"/>
 <attribute name="NAME" x="-158.75" y="-69.342" size="1.778" layer="95" rot="R180"/>
 </instance>
-<instance part="SV1" gate="G$1" x="-160.02" y="-78.74" smashed="yes" rot="R180">
+<instance part="PGND" gate="G$1" x="-160.02" y="-78.74" smashed="yes" rot="R180">
 <attribute name="VALUE" x="-158.75" y="-71.12" size="1.778" layer="96" rot="R180"/>
 <attribute name="NAME" x="-158.75" y="-84.582" size="1.778" layer="95" rot="R180"/>
 </instance>
@@ -15341,13 +15341,13 @@ Add a U-shape </text>
 <wire x1="-195.58" y1="-76.2" x2="-180.34" y2="-76.2" width="0.1524" layer="91"/>
 <label x="-185.42" y="-76.2" size="1.778" layer="95"/>
 <pinref part="R11" gate="G$1" pin="1"/>
-<pinref part="SV1" gate="G$1" pin="1"/>
+<pinref part="PGND" gate="G$1" pin="1"/>
 <wire x1="-167.64" y1="-76.2" x2="-180.34" y2="-76.2" width="0.1524" layer="91"/>
-<pinref part="SV1" gate="G$1" pin="2"/>
+<pinref part="PGND" gate="G$1" pin="2"/>
 <wire x1="-167.64" y1="-78.74" x2="-180.34" y2="-78.74" width="0.1524" layer="91"/>
 <wire x1="-180.34" y1="-78.74" x2="-180.34" y2="-76.2" width="0.1524" layer="91"/>
 <junction x="-180.34" y="-76.2"/>
-<pinref part="SV1" gate="G$1" pin="3"/>
+<pinref part="PGND" gate="G$1" pin="3"/>
 <wire x1="-167.64" y1="-81.28" x2="-180.34" y2="-81.28" width="0.1524" layer="91"/>
 <wire x1="-180.34" y1="-81.28" x2="-180.34" y2="-78.74" width="0.1524" layer="91"/>
 <junction x="-180.34" y="-78.74"/>
@@ -15489,14 +15489,14 @@ Add a U-shape </text>
 <wire x1="-195.58" y1="-66.04" x2="-180.34" y2="-66.04" width="0.1524" layer="91"/>
 <label x="-185.42" y="-66.04" size="1.778" layer="95"/>
 <pinref part="R11" gate="G$1" pin="2"/>
-<pinref part="SV2" gate="G$1" pin="1"/>
+<pinref part="DGND" gate="G$1" pin="1"/>
 <wire x1="-167.64" y1="-60.96" x2="-180.34" y2="-60.96" width="0.1524" layer="91"/>
 <wire x1="-180.34" y1="-60.96" x2="-180.34" y2="-63.5" width="0.1524" layer="91"/>
-<pinref part="SV2" gate="G$1" pin="2"/>
+<pinref part="DGND" gate="G$1" pin="2"/>
 <wire x1="-180.34" y1="-63.5" x2="-180.34" y2="-66.04" width="0.1524" layer="91"/>
 <wire x1="-167.64" y1="-63.5" x2="-180.34" y2="-63.5" width="0.1524" layer="91"/>
 <junction x="-180.34" y="-63.5"/>
-<pinref part="SV2" gate="G$1" pin="3"/>
+<pinref part="DGND" gate="G$1" pin="3"/>
 <wire x1="-167.64" y1="-66.04" x2="-180.34" y2="-66.04" width="0.1524" layer="91"/>
 <junction x="-180.34" y="-66.04"/>
 </segment>

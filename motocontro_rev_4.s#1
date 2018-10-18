@@ -15148,9 +15148,9 @@ Add a U-shape </text>
 <attribute name="NAME" x="-127" y="4.318" size="1.27" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-127" y="22.098" size="1.27" layer="96" rot="R180"/>
 </instance>
-<instance part="C4" gate="G$1" x="-238.76" y="10.16" smashed="yes">
-<attribute name="NAME" x="-237.744" y="10.795" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-237.744" y="5.969" size="1.778" layer="96"/>
+<instance part="C4" gate="G$1" x="-261.62" y="10.16" smashed="yes">
+<attribute name="NAME" x="-260.604" y="10.795" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-260.604" y="5.969" size="1.778" layer="96"/>
 </instance>
 <instance part="D1" gate="1" x="-220.98" y="10.16" smashed="yes" rot="R90">
 <attribute name="NAME" x="-222.885" y="8.382" size="1.778" layer="95" rot="R90"/>
@@ -15168,9 +15168,9 @@ Add a U-shape </text>
 <attribute name="NAME" x="-232.41" y="14.1986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-232.41" y="9.398" size="1.778" layer="96"/>
 </instance>
-<instance part="F1" gate="G$1" x="-254" y="17.78" smashed="yes">
-<attribute name="NAME" x="-257.81" y="19.177" size="1.778" layer="95"/>
-<attribute name="VALUE" x="-257.81" y="14.859" size="1.778" layer="96"/>
+<instance part="F1" gate="G$1" x="-248.92" y="17.78" smashed="yes">
+<attribute name="NAME" x="-252.73" y="19.177" size="1.778" layer="95"/>
+<attribute name="VALUE" x="-252.73" y="14.859" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -15225,8 +15225,11 @@ Add a U-shape </text>
 </segment>
 <segment>
 <pinref part="F1" gate="G$1" pin="1"/>
-<wire x1="-259.08" y1="17.78" x2="-264.16" y2="17.78" width="0.1524" layer="91"/>
-<label x="-266.7" y="17.78" size="1.778" layer="95"/>
+<wire x1="-254" y1="17.78" x2="-259.08" y2="17.78" width="0.1524" layer="91"/>
+<label x="-261.62" y="17.78" size="1.778" layer="95"/>
+<pinref part="C4" gate="G$1" pin="+"/>
+<wire x1="-261.62" y1="12.7" x2="-261.62" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="-261.62" y1="17.78" x2="-259.08" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LVG" class="0">
@@ -15328,10 +15331,11 @@ Add a U-shape </text>
 <pinref part="C2" gate="G$1" pin="-"/>
 <wire x1="-210.82" y1="5.08" x2="-210.82" y2="2.54" width="0.1524" layer="91"/>
 <junction x="-210.82" y="2.54"/>
-<pinref part="C4" gate="G$1" pin="-"/>
-<wire x1="-238.76" y1="5.08" x2="-238.76" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="-238.76" y1="2.54" x2="-220.98" y2="2.54" width="0.1524" layer="91"/>
 <junction x="-220.98" y="2.54"/>
+<pinref part="C4" gate="G$1" pin="-"/>
+<wire x1="-261.62" y1="5.08" x2="-261.62" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-261.62" y1="2.54" x2="-238.76" y2="2.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="-195.58" y1="-76.2" x2="-180.34" y2="-76.2" width="0.1524" layer="91"/>
@@ -15782,12 +15786,9 @@ Add a U-shape </text>
 <wire x1="-233.68" y1="17.78" x2="-236.22" y2="17.78" width="0.1524" layer="91"/>
 <label x="-246.38" y="17.78" size="1.778" layer="95"/>
 <wire x1="-236.22" y1="17.78" x2="-238.76" y2="17.78" width="0.1524" layer="91"/>
-<pinref part="C4" gate="G$1" pin="+"/>
 <wire x1="-238.76" y1="17.78" x2="-241.3" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="-238.76" y1="12.7" x2="-238.76" y2="17.78" width="0.1524" layer="91"/>
-<junction x="-238.76" y="17.78"/>
 <pinref part="F1" gate="G$1" pin="2"/>
-<wire x1="-248.92" y1="17.78" x2="-241.3" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="-243.84" y1="17.78" x2="-241.3" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

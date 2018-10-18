@@ -13120,9 +13120,9 @@ diameter 2.54 mm, horizontal, grid 10.16 mm</description>
 <part name="U$4" library="JST_headers" deviceset="JST-PH_5-PIN_HEADER" device=""/>
 <part name="C4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="CPOL-US" device="E10-20" value="1000u"/>
 <part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N4728" device="" package3d_urn="urn:adsk.eagle:package:43341/1"/>
-<part name="R13" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805"/>
-<part name="R14" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805"/>
-<part name="R15" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805"/>
+<part name="R13" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="15k"/>
+<part name="R14" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="15k"/>
+<part name="R15" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="R-US_" device="R0805" value="15k"/>
 </parts>
 <sheets>
 <sheet>
@@ -13141,9 +13141,9 @@ a breakout board that docks for this BUCK</text>
 <wire x1="71.12" y1="-93.98" x2="241.3" y2="-93.98" width="0.6096" layer="94"/>
 <wire x1="241.3" y1="-93.98" x2="241.3" y2="66.04" width="0.6096" layer="94"/>
 <wire x1="241.3" y1="66.04" x2="71.12" y2="66.04" width="0.6096" layer="94"/>
-<wire x1="-134.62" y1="-93.98" x2="-246.38" y2="-91.44" width="0.6096" layer="94"/>
-<wire x1="-246.38" y1="-91.44" x2="-246.38" y2="68.58" width="0.6096" layer="94"/>
-<wire x1="-246.38" y1="68.58" x2="-134.62" y2="66.04" width="0.6096" layer="94"/>
+<wire x1="-134.62" y1="-93.98" x2="-274.32" y2="-93.98" width="0.6096" layer="94"/>
+<wire x1="-274.32" y1="-93.98" x2="-274.32" y2="66.04" width="0.6096" layer="94"/>
+<wire x1="-274.32" y1="66.04" x2="-134.62" y2="66.04" width="0.6096" layer="94"/>
 <text x="139.7" y="50.8" size="6.4516" layer="94">Half-Bridge Circuit </text>
 <text x="-193.04" y="53.34" size="6.4516" layer="94">Power</text>
 <wire x1="-134.62" y1="66.04" x2="-134.62" y2="-93.98" width="0.6096" layer="94"/>
