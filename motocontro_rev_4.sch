@@ -14963,6 +14963,8 @@ Add a U-shape </text>
 <text x="124.46" y="-11.176" size="1.778" layer="94">consider adding two in parallel </text>
 <text x="-124.46" y="-78.74" size="1.778" layer="94">Make an SPI bus to run to an OLED display in the front </text>
 <text x="-236.22" y="35.56" size="1.778" layer="91">series resistor from 48V and Zener</text>
+<text x="-66.04" y="-5.08" size="1.778" layer="91">Connected A1/15 to the Pedal </text>
+<text x="0" y="48.26" size="1.778" layer="91">change the package for this part (thinner) </text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="7.62" y="17.78" smashed="yes"/>
