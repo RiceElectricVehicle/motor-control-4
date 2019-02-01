@@ -22696,15 +22696,15 @@ diameter 5 mm, grid 2.54 mm</description>
 <sheets>
 <sheet>
 <plain>
-<text x="-236.22" y="-50.8" size="1.778" layer="94">PGND is used for the power ground. 
+<text x="-236.22" y="-50.8" size="1.778" layer="94">PGND is used for the power ground.
 DGND is used for the digital logic
 They will connect through GND trace </text>
 <text x="119.38" y="-2.54" size="1.778" layer="94">R3, R4 for potential current limit to the gates.
-This increases transient times 
+This increases transient times
 which reduces inductive spikes
 Need to find appropriate package</text>
-<text x="-233.68" y="35.56" size="1.778" layer="94">Made this part for the Stingray 
-We actually stilll need to make 
+<text x="-233.68" y="35.56" size="1.778" layer="94">Made this part for the Stingray
+We actually stilll need to make
 a breakout board that docks for this BUCK</text>
 <wire x1="71.12" y1="66.04" x2="71.12" y2="-93.98" width="0.6096" layer="94"/>
 <wire x1="71.12" y1="-93.98" x2="241.3" y2="-93.98" width="0.6096" layer="94"/>
@@ -22728,7 +22728,7 @@ a breakout board that docks for this BUCK</text>
 <text x="-45.72" y="-66.04" size="2.1844" layer="94">Fault Disable Time</text>
 <text x="40.64" y="-45.72" size="1.778" layer="94">Should be PGND </text>
 <text x="-251.46" y="33.02" size="1.778" layer="91">Stingray is overkill. Look for 10-1W buck</text>
-<text x="40.64" y="-25.4" size="1.778" layer="94">Make this tunable. 
+<text x="40.64" y="-25.4" size="1.778" layer="94">Make this tunable.
 Pot, triple parallel or something</text>
 <text x="-154.94" y="71.12" size="1.778" layer="94">Add test pads. Add headers for GND
 Add a U-shape </text>
@@ -22736,6 +22736,8 @@ Add a U-shape </text>
 <text x="137.16" y="30.48" size="1.778" layer="94">Add heatsink to FET package </text>
 <text x="124.46" y="-11.176" size="1.778" layer="94">consider adding two in parallel </text>
 <text x="-274.32" y="35.56" size="1.778" layer="91">series resistor from 48V and Zener</text>
+<text x="-236.22" y="35.56" size="1.778" layer="91">series resistor from 48V and Zener</text>
+<text x="0" y="48.26" size="1.778" layer="91">change the package for this part (thinner) </text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="7.62" y="17.78" smashed="yes"/>
